@@ -1,0 +1,3846 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-06",
+  "records": [
+    {
+      "repo": "vectorize-io/hindsight",
+      "name": "Hindsight",
+      "category": "AI 記憶",
+      "intro": "讓 AI agent 跨對話保留資訊、找回相關經驗，並從累積記憶整理出新的理解。適合需要持續認識使用者或專案的長期助理。",
+      "useCases": [
+        "個人化聊天助理與跨工作階段記憶",
+        "需要從過往經驗調整行為的客服、銷售或專案 agent"
+      ],
+      "features": [
+        "retain、recall、reflect 三種核心操作",
+        "結合語意、關鍵字、圖譜與時間檢索",
+        "以獨立 memory bank 管理使用者、agent 或專案",
+        "提供 SDK、REST API、MCP 與記憶管理介面"
+      ],
+      "setup": "官方建議以 Docker 啟動服務，設定 LLM 提供者與 API 金鑰，再透過 Python、Node.js／TypeScript、Go 或 REST API 連線。也提供 pip、Helm、嵌入式與託管選項。",
+      "requirements": [
+        "Docker 或對應的 Python／Kubernetes 環境",
+        "LLM 提供者設定；可選支援的本機模型",
+        "資料庫儲存與記憶資料的存取權限規劃"
+      ],
+      "warnings": [
+        "Facebook 原文的 traces／observability 描述與此 repo 的 README 定位不符；此處依官方 README 歸類為 AI agent 記憶系統。",
+        "README 雖列出 Prometheus 監控功能，但這是部署監控能力，並非產品主用途。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0tBdiGUbivXr9q7zJvU3NWN9jnPFdwcGHjLL3E62kwhNpxfnh6EXaDeCyCC8h89avl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "pushedAt": "2026-10-06T15:18:56Z",
+      "branch": "main",
+      "homepage": "https://hindsight.vectorize.io/",
+      "readmeSha": "250a2e8eca4fccae242a9b7c90ba5d17fe8f8919",
+      "githubUrl": "https://github.com/vectorize-io/hindsight",
+      "public": true,
+      "disabled": false,
+      "checkedDate": "2026-10-06",
+      "checkedAt": "2026-10-06T15:21:00Z",
+      "setupExecuted": false,
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/vectorize-io/hindsight"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/vectorize-io/hindsight/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/vectorize-io/hindsight/blob/main/LICENSE"
+        }
+      ],
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0tBdiGUbivXr9q7zJvU3NWN9jnPFdwcGHjLL3E62kwhNpxfnh6EXaDeCyCC8h89avl&id=100084639590584",
+          "postDate": "2026-09-25",
+          "relation": "作者貼文",
+          "sourceLabel": "Hindsight",
+          "confirmationUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid0tBdiGUbivXr9q7zJvU3NWN9jnPFdwcGHjLL3E62kwhNpxfnh6EXaDeCyCC8h89avl&id=100084639590584&comment_id=1031029739949046",
+          "confirmation": "作者留言直接連結 vectorize-io/hindsight"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "description_mismatch",
+          "label": "貼文描述與官方用途不同",
+          "detail": "Facebook 將專案描述為 traces／observability；README 定位為 AI agent 記憶系統。"
+        }
+      ]
+    },
+    {
+      "repo": "SolaceLabs/solace-agent-mesh",
+      "name": "Solace Agent Mesh",
+      "category": "多 Agent 協作",
+      "intro": "以事件訊息串接多個專職 AI agent 的 Python 框架，讓任務分工、資料交換與外部系統整合採取非同步流程。此版本現已棄用並封存。",
+      "useCases": [
+        "研究事件驅動、多 agent 分工與 A2A 通訊架構",
+        "維護或遷移既有 Solace Agent Mesh Python 專案"
+      ],
+      "features": [
+        "透過 Solace Event Mesh 傳遞 agent 訊息",
+        "Orchestrator 分解與委派多步驟任務",
+        "整合 Google ADK、Solace AI Connector 與 A2A",
+        "提供 Web UI、REST API、Slack 等介面擴充方式"
+      ],
+      "setup": "舊版文件要求 Python 3.10.16–3.13.x；建立虛擬環境後安裝 solace-agent-mesh，以 sam init --gui 初始化，再執行 sam run。新專案應先查看官方新版文件與遷移選項。",
+      "requirements": [
+        "Python 3.10.16–3.13.x 與 pip",
+        "macOS、Linux 或 Windows WSL",
+        "LLM API 金鑰及對應訊息服務設定"
+      ],
+      "warnings": [
+        "GitHub 已封存；README 明確宣布 Python 版已棄用，不再提供新功能、錯誤修正或安全更新。",
+        "安裝概要僅記錄舊版文件，不代表建議部署已停止維護的版本。"
+      ],
+      "replacementLinks": [
+        {
+          "label": "新版官方文件",
+          "url": "https://docs.solace.com/Agent-Mesh/agent-mesh.htm"
+        },
+        {
+          "label": "官方桌面版下載",
+          "url": "https://solace.com/products/agent-mesh/download"
+        }
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・已封存",
+      "archived": true,
+      "pushedAt": "2026-09-13T22:09:15Z",
+      "branch": "main",
+      "homepage": "https://solacelabs.github.io/solace-agent-mesh/",
+      "readmeSha": "33842693ea8d5ce2221ceaf303002d9f93f23c8f",
+      "facebookSources": [
+        "https://www.facebook.com/reel/990811250084347/"
+      ],
+      "githubUrl": "https://github.com/SolaceLabs/solace-agent-mesh",
+      "public": true,
+      "disabled": false,
+      "checkedDate": "2026-10-06",
+      "checkedAt": "2026-10-06T15:21:00Z",
+      "setupExecuted": false,
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/SolaceLabs/solace-agent-mesh"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/SolaceLabs/solace-agent-mesh/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/SolaceLabs/solace-agent-mesh/blob/main/LICENSE"
+        }
+      ],
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/990811250084347/",
+          "postDate": "2026-09-06",
+          "relation": "作者貼文直接連結"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "archived_deprecated",
+          "label": "已封存・已棄用",
+          "detail": "Python 版本停止功能、修正與安全更新。"
+        }
+      ]
+    },
+    {
+      "repo": "mvanhorn/cli-printing-press",
+      "name": "CLI Printing Press",
+      "category": "開發工具",
+      "intro": "用 AI 研究 API 與既有工具，再產生偏向 agent 使用的 Go CLI、對應技能與 MCP server。著重本機資料同步、離線查詢及跨資源組合命令。",
+      "useCases": [
+        "替 API 建立可供 AI agent 使用的命令列工具",
+        "把遠端資源同步到 SQLite 後做搜尋與組合分析"
+      ],
+      "features": [
+        "同一份規格產生 CLI 與 MCP 介面",
+        "SQLite、全文搜尋、增量同步與複合查詢",
+        "結構化輸出、精簡欄位、明確退出碼與 dry-run",
+        "產出研究文件與行為驗證資料"
+      ],
+      "setup": "需安裝 Go 1.26.6 以上、Node/npm 與支援 skills 的 agent。依 README 安裝 generator binary 及 Printing Press skills，重新載入 agent 後以 /printing-press 指定應用或 API；只裝其中一部分不構成完整建議流程。",
+      "requirements": [
+        "Go 1.26.6 以上",
+        "Node.js／npm",
+        "Claude Code 或其他支援 skills 的 agent；README 以 Claude Code 為主要測試路徑"
+      ],
+      "warnings": [
+        "產出與效能敘述來自專案文件，未在此實測。",
+        "生成工具若涉及網站登入、API 資料或憑證，仍須自行確認授權及服務條款。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "pushedAt": "2026-10-06T14:20:07Z",
+      "branch": "main",
+      "homepage": null,
+      "readmeSha": "d017b22caa1745ffbc14f9c931872e644b7a681d",
+      "facebookSources": [
+        "https://www.facebook.com/reel/990811250084347/",
+        "https://www.facebook.com/reel/2072686744122791/",
+        "https://www.facebook.com/reel/3170875986441659/"
+      ],
+      "githubUrl": "https://github.com/mvanhorn/cli-printing-press",
+      "public": true,
+      "disabled": false,
+      "checkedDate": "2026-10-06",
+      "checkedAt": "2026-10-06T15:21:00Z",
+      "setupExecuted": false,
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/mvanhorn/cli-printing-press"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/mvanhorn/cli-printing-press/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/mvanhorn/cli-printing-press/blob/main/LICENSE"
+        }
+      ],
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/990811250084347/",
+          "postDate": "2026-09-06",
+          "relation": "作者貼文直接連結"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2072686744122791/",
+          "postDate": "2026-08-24",
+          "relation": "作者貼文直接連結；重複推薦"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/3170875986441659/",
+          "postDate": "2026-08-23",
+          "relation": "作者貼文直接連結；重複推薦"
+        }
+      ],
+      "verificationFlags": []
+    },
+    {
+      "repo": "xingkongliang/skills-manager",
+      "name": "Skills Manager",
+      "category": "Agent 技能管理",
+      "intro": "集中整理 AI coding agent 技能的桌面工具，讓同一份技能庫依需求部署到不同 agent、全域環境或專案。適合同時使用多套 AI 開發工具的人。",
+      "useCases": [
+        "管理 Claude Code、Codex、Cursor 等工具的技能配置",
+        "建立常用技能組合，檢查來源更新與跨裝置備份"
+      ],
+      "features": [
+        "從 Git、資料夾、封存檔或市集匯入技能",
+        "以 presets、標籤與 workspace 組織技能",
+        "透過 symlink 或複製部署到不同 agent",
+        "檢查上游更新，並支援 Git 備份、版本還原與多裝置同步"
+      ],
+      "setup": "macOS 可用 Homebrew 或官方 DMG；Windows／Linux 可從 GitHub Releases 下載安裝包。安裝後匯入技能、選擇 agent 與 workspace，再套用 preset 或逐項部署；備份同步屬另行設定。",
+      "requirements": [
+        "macOS、Windows 或 Linux",
+        "已安裝的目標 coding agent，或自行指定技能資料夾",
+        "若自行編譯：Node.js 20.19+／22.12+、Rust 1.77.2+ 及 Tauri 系統依賴"
+      ],
+      "warnings": [
+        "Preset 套用是當次複製，不是持續同步的連動規則。",
+        "啟用 GitHub 備份需登入授權；README 說明會建立私有備份 repo。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "pushedAt": "2026-10-04T14:01:38Z",
+      "branch": "main",
+      "homepage": "https://skillsmanager.dev",
+      "readmeSha": "f2c96384a1f15069cb6b7f13ebcb2c9f88288864",
+      "facebookSources": [
+        "https://www.facebook.com/reel/990811250084347/"
+      ],
+      "githubUrl": "https://github.com/xingkongliang/skills-manager",
+      "public": true,
+      "disabled": false,
+      "checkedDate": "2026-10-06",
+      "checkedAt": "2026-10-06T15:21:00Z",
+      "setupExecuted": false,
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/xingkongliang/skills-manager"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/xingkongliang/skills-manager/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/xingkongliang/skills-manager/blob/main/LICENSE"
+        }
+      ],
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/990811250084347/",
+          "postDate": "2026-09-06",
+          "relation": "作者貼文直接連結"
+        }
+      ],
+      "verificationFlags": []
+    },
+    {
+      "repo": "gptme/gptme",
+      "name": "gptme",
+      "category": "終端機 AI Agent",
+      "intro": "以終端機為核心的通用 AI agent，可讀寫檔案、執行 shell／Python、使用瀏覽器並協助程式與日常知識工作。模型來源可自行選擇，也支援本機模型。",
+      "useCases": [
+        "在專案資料夾中修正測試、編輯程式與分析檔案",
+        "在 SSH、無介面伺服器或 CI 中執行有界限的自動化工作"
+      ],
+      "features": [
+        "內建 shell、Python、檔案編輯、瀏覽器與視覺工具",
+        "支援多種雲端提供者與 OpenAI 相容本機端點",
+        "可擴充 plugins、skills、lessons 與 hooks",
+        "兼具 MCP client／server，並提供跨工具記憶與 Web UI"
+      ],
+      "setup": "準備 Python 3.10 以上，使用 pipx install gptme 或 uv tool install gptme 安裝，再執行 gptme 設定模型提供者。需要瀏覽器等工具時另選相關 extras，並先限定允許存取的檔案與工具。",
+      "requirements": [
+        "Python 3.10 以上",
+        "可用的 LLM 服務設定或本機模型服務",
+        "瀏覽器、桌面等選用工具可能需要額外系統依賴"
+      ],
+      "warnings": [
+        "具備執行程式與修改檔案的能力；應限定工作目錄與憑證。",
+        "非互動模式會跳過工具確認，不宜在未界定權限時直接啟用。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "pushedAt": "2026-10-06T13:04:53Z",
+      "branch": "master",
+      "homepage": "https://gptme.org/",
+      "readmeSha": "723d3bb5e136d0c67cdb6bf53f13c6c5feed1219",
+      "facebookSources": [
+        "https://www.facebook.com/reel/990811250084347/",
+        "https://www.facebook.com/reel/2072686744122791/"
+      ],
+      "githubUrl": "https://github.com/gptme/gptme",
+      "public": true,
+      "disabled": false,
+      "checkedDate": "2026-10-06",
+      "checkedAt": "2026-10-06T15:21:00Z",
+      "setupExecuted": false,
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/gptme/gptme"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/gptme/gptme/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/gptme/gptme/blob/master/LICENSE"
+        }
+      ],
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/990811250084347/",
+          "postDate": "2026-09-06",
+          "relation": "作者貼文直接連結"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2072686744122791/",
+          "postDate": "2026-08-24",
+          "relation": "作者貼文直接連結；重複推薦"
+        }
+      ],
+      "verificationFlags": []
+    },
+    {
+      "repo": "IvanMurzak/Unity-MCP",
+      "name": "Unity MCP / AI Game Developer",
+      "category": "遊戲開發",
+      "intro": "把 Unity Editor 與遊戲 runtime 接到 AI agent 的 MCP 工具組。可讓 agent 讀取場景、操作物件與資產、編輯程式、執行測試，並擴充專案專屬工具。",
+      "useCases": [
+        "以自然語言輔助 Unity 場景搭建、資產處理與除錯",
+        "為 Unity 專案建立自訂 MCP tools 或遊戲內 AI 互動"
+      ],
+      "features": [
+        "涵蓋專案資產、場景、腳本、測試與效能診斷工具",
+        "支援 Editor 與編譯後遊戲 runtime",
+        "可產生 agent skills 或使用 MCP 連線",
+        "可用 C# 擴充 tools、resources 與 prompts"
+      ],
+      "setup": "從官方 Release 安裝 Unity 套件，或使用 OpenUPM／unity-mcp-cli 加入專案。接著選定 AI agent，在 Unity 的 Window／AI Game Developer 視窗產生 skills 或設定 MCP，確認連線後再測試簡單場景操作。",
+      "requirements": [
+        "Unity 專案與對應的 Unity Editor",
+        "支援的 AI agent／MCP client",
+        "若使用 CLI 安裝流程需 Node.js／npm；其登入流程另涉及 ai-game.dev 授權"
+      ],
+      "warnings": [
+        "工具可建立、修改及刪除場景、腳本與資產，正式專案應先保留版本控制或備份。",
+        "本次只查閱文件，未連線 Unity 或實測 runtime 功能。"
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "pushedAt": "2026-10-04T08:59:47Z",
+      "branch": "main",
+      "homepage": "https://ai-game.dev",
+      "readmeSha": "0e4abe8c2807bfd0c699aad82fad741e4c091bd9",
+      "facebookSources": [
+        "https://www.facebook.com/reel/990811250084347/",
+        "https://www.facebook.com/reel/1629656315543339/"
+      ],
+      "githubUrl": "https://github.com/IvanMurzak/Unity-MCP",
+      "public": true,
+      "disabled": false,
+      "checkedDate": "2026-10-06",
+      "checkedAt": "2026-10-06T15:21:00Z",
+      "setupExecuted": false,
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/IvanMurzak/Unity-MCP"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/IvanMurzak/Unity-MCP/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/IvanMurzak/Unity-MCP/blob/main/LICENSE"
+        }
+      ],
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/990811250084347/",
+          "postDate": "2026-09-06",
+          "relation": "作者貼文直接連結"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1629656315543339/",
+          "postDate": "2026-09-09",
+          "relation": "作者貼文直接連結；重複推薦"
+        }
+      ],
+      "verificationFlags": []
+    },
+    {
+      "repo": "awesome-selfhosted/awesome-selfhosted",
+      "name": "Awesome-Selfhosted",
+      "category": "自架服務目錄",
+      "intro": "依用途整理可自行架設的自由軟體與網路服務清單，涵蓋知識管理、協作、備份、媒體與開發工具等。適合作為尋找自架方案的起點。",
+      "useCases": [
+        "按需求比較可自架的服務與開源替代方案",
+        "先查看專案、授權及技術棧，再前往個別專案研究部署"
+      ],
+      "features": [
+        "按功能分門別類整理自架軟體",
+        "條目提供官網、原始碼及部分示範連結",
+        "標示各專案授權與部署技術",
+        "提供官方 HTML 版與 GitHub Markdown 版"
+      ],
+      "setup": "本 repo 是資源清單，無須安裝。從官方 HTML 目錄或 README 挑選分類，再依各個收錄專案的官方文件部署；它沒有一套通用安裝流程。",
+      "requirements": [
+        "閱讀清單只需瀏覽器",
+        "實際部署的伺服器、依賴與權限因收錄專案而異"
+      ],
+      "warnings": [
+        "Facebook 貼文稱為 agent-device，但實際連向 Awesome-Selfhosted；此項依實際連結內容收錄，不推測原本想推薦哪個專案。",
+        "CC-BY-SA-3.0 是清單本身的授權，收錄軟體各自適用自己的授權。"
+      ],
+      "license": "CC-BY-SA-3.0",
+      "licenseApiValue": "NOASSERTION",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:12:26Z",
+      "branch": "master",
+      "homepage": "https://awesome-selfhosted.net/",
+      "readmeSha": "34bc2efc63b0c9d2e735bd6d7ef055e328d6dd1c",
+      "githubUrl": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1629656315543339/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1629656315543339/",
+          "postDate": "2026-09-09",
+          "relation": "貼文名稱為 agent-device，實際外連為此 repo",
+          "sourceLabel": "agent-device"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "name_link_mismatch",
+          "label": "貼文名稱與連結不符",
+          "detail": "名稱 agent-device 的連結實際指向 Awesome-Selfhosted 自架服務清單。"
+        }
+      ],
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README.md、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/awesome-selfhosted/awesome-selfhosted"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/awesome-selfhosted/awesome-selfhosted/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/awesome-selfhosted/awesome-selfhosted/blob/master/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "nickspock/claude-code-guide",
+      "name": "Claude Code Guide（原始連結待確認）",
+      "category": "待驗證",
+      "intro": "Facebook 貼文提供的 Claude Code Guide 連結目前無法驗證，GitHub repository 與 README 查詢均回傳 404。保留來源，待取得正確網址後再補上內容。",
+      "useCases": [],
+      "features": [],
+      "setup": "尚未取得 README，無法核實安裝或閱讀方式。",
+      "requirements": [],
+      "warnings": [
+        "404 無法單獨判定專案已刪除、改名、轉為私有或只是網址有誤。",
+        "未將任何名稱相近的專案當成原始推薦。"
+      ],
+      "license": null,
+      "status": "原始連結無法驗證",
+      "archived": null,
+      "public": null,
+      "disabled": null,
+      "pushedAt": null,
+      "branch": null,
+      "homepage": null,
+      "readmeSha": null,
+      "githubUrl": "https://github.com/nickspock/claude-code-guide",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1629656315543339/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1629656315543339/",
+          "postDate": "2026-09-09",
+          "relation": "作者貼文直接連結"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "unverified_link",
+          "label": "原始連結待確認",
+          "detail": "GitHub repository API 與 README 查詢回 404；未能核實公開狀態、授權或內容。"
+        }
+      ],
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector 回傳 404；GitHub 限定網域搜尋亦無結果",
+      "sources": [
+        {
+          "type": "attempted_repository_metadata",
+          "url": "https://api.github.com/repos/nickspock/claude-code-guide",
+          "result": "404 Not Found"
+        },
+        {
+          "type": "attempted_repository",
+          "url": "https://github.com/nickspock/claude-code-guide",
+          "result": "無法驗證"
+        }
+      ]
+    },
+    {
+      "repo": "Osmantic/ODS",
+      "name": "ODS / Osmantic Deployment System",
+      "category": "本機 AI 部署",
+      "intro": "把本機模型、聊天介面、控制面板與多種 AI 服務整合成可在自有硬體運行的部署系統，減少逐一串接服務的工作。目前是 V3 預發行版本。",
+      "useCases": [
+        "在家用工作站或 homelab 建立本機 AI 服務",
+        "集中管理聊天、文件檢索、語音、圖像與自動化服務"
+      ],
+      "features": [
+        "依硬體選擇模型並整合本機推論與聊天介面",
+        "透過 dashboard／CLI 管理模型、服務與擴充套件",
+        "可加入語音、RAG、搜尋、圖像與 n8n 工作流程",
+        "提供本機、雲端與混合模式選擇"
+      ],
+      "setup": "先依官方支援矩陣確認系統與 GPU。Linux／macOS 需先啟動 Docker；Windows 官方流程透過 PowerShell 引導 WSL2、Ubuntu 與 Docker Desktop。查閱安裝器信任說明、版本驗證與安全公告後，再選擇安裝來源與元件。",
+      "requirements": [
+        "符合官方支援矩陣的 Linux、Windows WSL2 或 Apple Silicon macOS",
+        "Docker／Docker Desktop 與足夠的模型儲存空間",
+        "本機推論能力取決於 GPU、記憶體、驅動與模型；不同平台有額外限制"
+      ],
+      "warnings": [
+        "目前為 V3 pre-release；README 表明預設安裝 main 的持續更新程式，尚無通過端到端驗證的簽署安裝通道。",
+        "ODS 是混合授權：主要程式 Apache-2.0；Pixel 只允許作為 ODS 組件使用與散布，並非 Apache-2.0 或一般開源授權。",
+        "下載的模型、第三方服務、字型及素材各自有授權，不能以根目錄 LICENSE 概括。",
+        "安裝可能涉及系統元件、容器、網路服務與權限變更；本次僅查文件，未執行任何安裝。"
+      ],
+      "license": "混合授權：Apache-2.0 + Pixel License for ODS",
+      "licenseApiValue": "Apache-2.0",
+      "status": "公開・未封存・V3 預發行",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:14:00Z",
+      "branch": "main",
+      "homepage": "https://osmantic.com",
+      "readmeSha": "dac7b1355f55197c789ffae287d38841ad63347b",
+      "githubUrl": "https://github.com/Osmantic/ODS",
+      "facebookSources": [
+        "https://www.facebook.com/reel/2072686744122791/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2072686744122791/",
+          "postDate": "2026-08-24",
+          "relation": "作者貼文明確提及的 repo"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "prerelease",
+          "label": "預發行版本",
+          "detail": "V3 pre-release；預設安裝器指向 main，尚非通過驗證的簽署版本。"
+        },
+        {
+          "type": "mixed_license",
+          "label": "含用途限制授權",
+          "detail": "Pixel 僅授權於 ODS 範圍內使用及散布，不能整體視為 Apache-2.0。"
+        }
+      ],
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE、ods/LICENSING.md、Pixel License",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/Osmantic/ODS"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Osmantic/ODS/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Osmantic/ODS/blob/main/LICENSE"
+        },
+        {
+          "type": "licensing_overview",
+          "url": "https://github.com/Osmantic/ODS/blob/main/ods/LICENSING.md"
+        },
+        {
+          "type": "component_license",
+          "url": "https://github.com/Osmantic/ODS/blob/main/ods/vendor/pixel/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "repo": "andrewyng/aisuite",
+      "name": "aisuite",
+      "category": "多模型 API",
+      "intro": "以一套 Python 介面呼叫多家 LLM，減少切換供應商時重寫 SDK 程式的工作。除統一聊天 API，也提供工具呼叫與 agent 執行流程。",
+      "useCases": [
+        "快速比較或切換不同 LLM 提供者",
+        "以 Python 函式、工具組及 MCP 建立可控的 agent"
+      ],
+      "features": [
+        "以 provider:model 格式選擇模型",
+        "統一 Chat Completions 請求與回應介面",
+        "支援 Python 函式工具、多輪呼叫與 Agents API",
+        "提供工具政策、狀態保存、產物記錄與 tracing"
+      ],
+      "setup": "在 Python 環境安裝 aisuite，依要使用的供應商加入對應 extras，例如 aisuite[anthropic]。設定該供應商的 API 金鑰或本機服務，再建立 Client，以 provider:model 指定模型；MCP 功能另有對應 extras。",
+      "requirements": [
+        "Python 環境",
+        "目標模型提供者的 SDK 與連線設定",
+        "使用雲端 API 時需對應憑證及額度；本機模型需可用服務"
+      ],
+      "warnings": [
+        "目前 README 中的 OpenWorker 已搬到獨立 repo；aisuite 本身仍是 Python library，不應把兩者當成同一個桌面產品。",
+        "同一介面不代表所有供應商都支援相同功能；例如串流限支援的 provider。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-18T23:01:44Z",
+      "branch": "main",
+      "homepage": null,
+      "readmeSha": "80916566e46c166051d83da148c5379be1801398",
+      "githubUrl": "https://github.com/andrewyng/aisuite",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1259604339504885/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1259604339504885/",
+          "postDate": "2026-07-26",
+          "relation": "貼文明確提及 aisuite、Andrew Ng 與統一模型 API；以官方 repo 核對名稱、作者與用途"
+        }
+      ],
+      "verificationFlags": [],
+      "canonicalResolution": "GitHub 搜尋取得 andrewyng/aisuite；README 述明 unified provider API，LICENSE 署名 Andrew Ng，與 Facebook 描述一致。",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository search、metadata、README.md、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/andrewyng/aisuite"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/andrewyng/aisuite/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/andrewyng/aisuite/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "name": "Cognee",
+      "category": "AI 記憶",
+      "intro": "把文件、程式碼與對話整理成可搜尋的知識圖譜與長期記憶，讓 AI agent 在不同工作階段延續專案脈絡，找回先前的決策與經驗。",
+      "useCases": [
+        "替 agent 保存跨工作階段的專案記憶",
+        "整合文件、程式碼與團隊對話，建立可查詢的知識庫"
+      ],
+      "features": [
+        "結合實體關係、圖譜、向量與程式碼脈絡",
+        "remember、recall、improve、forget 記憶操作",
+        "支援本機小模型的文字擷取與檢索",
+        "提供 Python、REST API、MCP 與 agent 整合途徑"
+      ],
+      "setup": "需 Python 3.10–3.14；可用 pip 或 uv 安裝 cognee[gliner]，依官方範例建立與檢索記憶。本機文字流程首次使用會下載擷取與 embedding 模型；需要生成回答、視覺或轉錄時另設定對應模型。也提供 Docker 部署。",
+      "requirements": [
+        "Python 3.10–3.14",
+        "本機模型首次下載所需的網路及儲存空間",
+        "選用 UI 需 Node.js／npm，UI 的 MCP 服務另需 Docker"
+      ],
+      "warnings": [
+        "本機無 API key 流程主要提供文字擷取、檢索與 session 儲存，不代表所有生成式功能都無需模型設定。",
+        "README 將內附 GLiNER 擷取器及 Postgres 圖譜儲存列為示範能力，正式部署需另確認品質與授權版本。",
+        "對外部署應設定驗證與持久化儲存，不宜直接沿用停用存取控制的單人示範設定。"
+      ],
+      "license": "Apache-2.0",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1686471012470322/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1686471012470322/",
+          "postDate": "2026-07-21",
+          "relation": "貼文明確提及 Cognee、長期記憶與知識圖譜；以官方 repo 核對"
+        }
+      ],
+      "verificationFlags": [],
+      "canonicalResolution": "GitHub repo 搜尋取得 topoteretes/cognee；官方 README 名稱、長期記憶與知識圖譜定位均吻合。",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:26:21Z",
+      "branch": "main",
+      "homepage": "https://www.cognee.ai",
+      "readmeSha": "b3bbd1d74ce8113b7b5efc93128a97c1d3f31e07",
+      "githubUrl": "https://github.com/topoteretes/cognee",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository search、metadata、README.md、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/topoteretes/cognee"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/topoteretes/cognee/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/topoteretes/cognee/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "KnockOutEZ/wigolo",
+      "name": "wigolo",
+      "category": "網頁搜尋與研究",
+      "intro": "讓 AI agent 透過 MCP、REST 或 CLI 使用網頁搜尋、讀取、爬取與資料擷取，並將已看過的內容保存在本機快取。核心搜尋工具不要求搜尋 API 金鑰。",
+      "useCases": [
+        "替 coding agent 補上即時文件搜尋與網頁資料擷取",
+        "重用本機快取，對來源做研究、差異比較或結構化整理"
+      ],
+      "features": [
+        "整合搜尋、fetch、crawl、extract 與本機 cache",
+        "支援 MCP、REST、SDK 及命令列介面",
+        "回傳來源引用、評分與失敗／過期狀態",
+        "研究合成可選雲端 LLM、Ollama 或交由使用端 agent 完成"
+      ],
+      "setup": "需 Node.js 20 以上及約 1.5 GB 空間。以 npx wigolo init 安裝本機瀏覽器與模型，視需要指定連接的 agent；再以 doctor 確認健康狀態。使用完整研究合成時可另設 LLM，核心搜尋與擷取可不設 API key。",
+      "requirements": [
+        "Node.js 20 以上",
+        "macOS、Linux 或 Windows，約 1.5 GB 可用空間",
+        "查詢外部搜尋引擎及網頁仍需要網路"
+      ],
+      "warnings": [
+        "目前標為 public beta；本機快取不代表網頁查詢不會連外。",
+        "核心工具無需搜尋 API key；自動生成完整研究答案仍依賴可用 LLM，否則回傳證據摘要給呼叫端。",
+        "原始碼使用 AGPL-3.0，另提供商業授權，整合或散布前需閱讀對應條款。"
+      ],
+      "license": "AGPL-3.0-only（另提供商業授權）",
+      "licenseApiValue": "NOASSERTION",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1345908543802871/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1345908543802871/",
+          "postDate": "2026-07-19",
+          "relation": "貼文明確提及 wigolo 名稱、搜尋／擷取／MCP／本機快取；以官方 repo 核對"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "public_beta",
+          "label": "公開測試版",
+          "detail": "README 將目前狀態標示為 public beta。"
+        }
+      ],
+      "canonicalResolution": "GitHub 搜尋取得 KnockOutEZ/wigolo；README 名稱、MCP 工具、核心無金鑰與選用 Ollama 均吻合。",
+      "status": "公開・未封存・測試版",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T12:00:36Z",
+      "branch": "main",
+      "homepage": "https://wigolo.app",
+      "readmeSha": "d032c4d43b180ed3f5a791a0f2b418fe083f5a11",
+      "githubUrl": "https://github.com/KnockOutEZ/wigolo",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository search、metadata、README.md、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/KnockOutEZ/wigolo"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/KnockOutEZ/wigolo/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/KnockOutEZ/wigolo/blob/main/LICENSE"
+        },
+        {
+          "type": "licensing_overview",
+          "url": "https://github.com/KnockOutEZ/wigolo/blob/main/LICENSING.md"
+        }
+      ]
+    },
+    {
+      "id": "unresolved-ai-face",
+      "repo": null,
+      "name": "AI FACE（待確認）",
+      "category": "待驗證",
+      "intro": "Facebook 貼文介紹名為 AI FACE 的 ChatGPT 視覺化臉孔 Chrome 擴充套件，目前未取得可對應的原始碼 repo 或官方頁面，暫不補猜連結。",
+      "useCases": [],
+      "features": [],
+      "setup": "尚未核實官方專案與安裝來源。",
+      "requirements": [],
+      "warnings": [
+        "24 幀、免 API key、本機語音分析及 0.1.0 版本等資訊只來自 Facebook 貼文，尚未透過專案文件驗證。"
+      ],
+      "license": null,
+      "status": "專案身份待確認",
+      "archived": null,
+      "public": null,
+      "disabled": null,
+      "pushedAt": null,
+      "branch": null,
+      "homepage": null,
+      "readmeSha": null,
+      "githubUrl": null,
+      "facebookSources": [
+        "https://www.facebook.com/reel/1362902192688081/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1362902192688081/",
+          "postDate": "2026-08-04",
+          "relation": "貼文具名推薦；未附可確認 GitHub 連結"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "unmatched_project",
+          "label": "尚未找到對應 repo",
+          "detail": "以名稱及特色查詢 GitHub 與 GitHub 網域搜尋，未找到可可靠對應的專案。"
+        }
+      ],
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "名稱／版本／特色搜尋無可確認結果",
+      "sources": []
+    },
+    {
+      "repo": "zhongerxin/Cowart",
+      "name": "Cowart",
+      "category": "視覺創作",
+      "intro": "在 Codex 中提供以 tldraw 為基礎的無限畫布，將構思、圖片標註、生成與反覆修改放在同一個視覺工作區。是第三方插件，非 OpenAI 官方產品。",
+      "useCases": [
+        "在畫布上標註圖片修改需求，並排比較生成結果",
+        "把圖片、HTML 與簡報放在同一個專案視覺工作區"
+      ],
+      "features": [
+        "原生 MCP widget 無限畫布",
+        "將畫布與圖片資產保存到使用者專案",
+        "依選取框位置、比例及參考圖產生圖片",
+        "支援標註修圖、AI HTML、影片與 Slides 工作流程"
+      ],
+      "setup": "依 README 將 zhongerxin/Cowart 註冊為 Codex Git marketplace，安裝 cowart@cowart-github 並確認啟用。安裝後需完整退出並重新啟動 Codex；發布包已含 MCP 與 widget，正常安裝不用在插件快取中手動 npm install。",
+      "requirements": [
+        "支援對應插件與 MCP widget 的 Codex 版本",
+        "可寫入的專案或文件資料夾",
+        "圖片產生需宿主中可用的圖像生成能力"
+      ],
+      "warnings": [
+        "Facebook 提及 API 需求，但目前 repo 的圖片工作流程預設使用宿主內建 imagegen；是否另需 API 金鑰應依實際環境確認。",
+        "專案根目錄為 MIT；tldraw 等依賴仍適用各自授權。",
+        "未安裝插件或實測宿主相容性。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T08:28:01Z",
+      "branch": "main",
+      "homepage": null,
+      "readmeSha": "6f69414dfec690641f6895d22d8001030aeee4d3",
+      "githubUrl": "https://github.com/zhongerxin/Cowart",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid023AtnPox22i28qphaxYiSeZu1qu3asQbUV7mn5iPQq1juf8AkF5tedi3H32uESLsVl&id=100084639590584",
+        "https://www.facebook.com/reel/4319002168353350/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid023AtnPox22i28qphaxYiSeZu1qu3asQbUV7mn5iPQq1juf8AkF5tedi3H32uESLsVl&id=100084639590584",
+          "postDate": "2026-07-13",
+          "relation": "貼文明確提及 Cowart、Codex 無限畫布與標註生圖；以原作者 repo 核對"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/4319002168353350/",
+          "postDate": "2026-07-13",
+          "relation": "同日重複推薦影片"
+        }
+      ],
+      "verificationFlags": [],
+      "canonicalResolution": "GitHub 搜尋取得 zhongerxin/Cowart；README 明確同名且具 Codex 原生無限畫布、圖片生成及標註迭代功能；作者資訊與 repo 一致。",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository search、metadata、README.md、LICENSE、公開圖片生成工作流程",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/zhongerxin/Cowart"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/zhongerxin/Cowart/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/zhongerxin/Cowart/blob/main/LICENSE"
+        },
+        {
+          "type": "image_generation_workflow",
+          "url": "https://github.com/zhongerxin/Cowart/blob/main/skills/cowart-image-gen/SKILL.md"
+        }
+      ]
+    },
+    {
+      "repo": "FoundationAgents/OpenManus",
+      "name": "OpenManus",
+      "category": "通用 AI Agent",
+      "intro": "可自行部署的通用 AI agent 框架，透過模型與工具執行終端機任務、瀏覽器操作及資料分析。提供單 agent、MCP 與實驗性多 agent 入口。",
+      "useCases": [
+        "研究能使用瀏覽器及外部工具的任務型 agent",
+        "建立資料分析、視覺化及多步驟工作原型"
+      ],
+      "features": [
+        "可設定 LLM API 與視覺模型",
+        "整合 Browser Use MCP 進行瀏覽器操作",
+        "提供 MCP 工具模式",
+        "可選 DataAnalysis agent 與多 agent flow"
+      ],
+      "setup": "依 README 使用 Python 3.12 的 uv 或 conda 環境，clone 官方 repo 並安裝 requirements。複製設定範本，填入模型服務設定後執行 main.py；瀏覽器及資料分析功能另依各自文件補齊依賴。",
+      "requirements": [
+        "Python 3.12 與 uv 或 conda",
+        "LLM API 憑證或相容服務設定",
+        "瀏覽器操作需對應 Chrome／Chromium 與 Browser Use；資料視覺化有額外依賴"
+      ],
+      "warnings": [
+        "README 明確將 run_flow.py 多 agent 模式標示為不穩定。",
+        "可操作瀏覽器與執行工具，應先限定工作環境、帳號與可修改資料。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-30T08:37:25Z",
+      "lastDefaultBranchCommitAt": "2026-08-16T10:29:11Z",
+      "lastDefaultBranchCommitUrl": "https://github.com/FoundationAgents/OpenManus/commit/3309bf4e416fb1c74b008f3e86494439a31bad53",
+      "activityNote": "查核時 repo 最近推送為 2026-09-30，main 最新 commit 日期為 2026-08-16；兩者不是同一指標。",
+      "branch": "main",
+      "homepage": "https://openmanus.github.io/",
+      "readmeSha": "a2b64c9cc810732131e9144202af7c66526f549e",
+      "githubUrl": "https://github.com/FoundationAgents/OpenManus",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02r4LMcSc1MqMqFQvpWVrcE26XwaXQoFVXVE4yMxkDCuQnH5zAWEXJ91bJQPwmnxPAl&id=100084639590584"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02r4LMcSc1MqMqFQvpWVrcE26XwaXQoFVXVE4yMxkDCuQnH5zAWEXJ91bJQPwmnxPAl&id=100084639590584",
+          "postDate": "2026-07-13",
+          "relation": "貼文明確提及 OpenManus、瀏覽器／MCP／資料分析／多 agent；以官方 repo 核對"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "experimental_feature",
+          "label": "多 Agent 模式不穩定",
+          "detail": "README 將 run_flow.py 標記為 unstable multi-agent version。"
+        }
+      ],
+      "canonicalResolution": "GitHub 搜尋取得 FoundationAgents/OpenManus；README 名稱、作者群及瀏覽器／MCP／DataAnalysis／run_flow 功能吻合。",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository search、metadata、README.md、LICENSE、main 最新 commit",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/FoundationAgents/OpenManus"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/FoundationAgents/OpenManus/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/FoundationAgents/OpenManus/blob/main/LICENSE"
+        },
+        {
+          "type": "default_branch_commit",
+          "url": "https://github.com/FoundationAgents/OpenManus/commit/3309bf4e416fb1c74b008f3e86494439a31bad53"
+        }
+      ]
+    },
+    {
+      "repo": "HKUDS/Vibe-Trading",
+      "name": "Vibe-Trading",
+      "category": "金融研究工具",
+      "intro": "把自然語言研究問題連到行情資料、策略程式、回測與報告的 AI 工作區。可分析交易紀錄，將歸納出的規則和原始交易路徑並排比較。",
+      "useCases": [
+        "研究市場資料處理、策略回測與報告生成流程",
+        "用 Shadow Account 檢視歷史交易紀錄與規則化模擬的差異"
+      ],
+      "features": [
+        "自然語言研究與多市場資料載入",
+        "產生策略程式、回測指標與可查核產物",
+        "Shadow Account 交易紀錄解析、規則抽取與比較報告",
+        "提供 CLI、Web UI、REST API 與 MCP"
+      ],
+      "setup": "準備 Python 3.11 以上，安裝 vibe-trading-ai 後用 init 設定模型提供者；也可用 Docker。先使用公開或去識別化樣本做研究與模擬，另行核對資料來源與回測設定。",
+      "requirements": [
+        "Python 3.11 以上，或 Docker 部署環境",
+        "支援的 LLM API 設定或本機 Ollama",
+        "可用且符合使用條款的行情資料；選用資料來源可能另有授權或費用"
+      ],
+      "warnings": [
+        "僅作技術介紹，不構成投資建議。AI 產出、行情資料與回測可能有錯誤；歷史績效不保證未來結果。",
+        "專案另含實驗性券商交易能力，README 說明未經真實券商帳戶驗證；不可將研究或回測結果直接當成實盤安全保證。",
+        "交易紀錄、券商帳戶與 API 憑證具敏感性，匯入或連線前應確認資料流向與權限。",
+        "README 警告同名社群帳號與代幣冒用官方身份，專案聲明從未發行或背書代幣。"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T13:38:06Z",
+      "branch": "main",
+      "homepage": "https://vibetrading.wiki/",
+      "readmeSha": "b359b3ac80cdf09e7370367ec7169878bb2a0f44",
+      "githubUrl": "https://github.com/HKUDS/Vibe-Trading",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1585801649550302/"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1585801649550302/",
+          "postDate": "2026-06-29",
+          "relation": "貼文明確提及 Vibe-Trading、研究回測與 Shadow Account；以官方 repo 核對"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "financial_risk",
+          "label": "金融研究風險",
+          "detail": "資料及回測須獨立核實；實盤功能屬實驗性，歷史結果不保證未來。"
+        }
+      ],
+      "canonicalResolution": "GitHub 搜尋取得 HKUDS/Vibe-Trading；README 自稱 Personal Trading Agent，Shadow Account 及研究／策略／回測／報告功能與貼文吻合。",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository search、metadata、README.md、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/HKUDS/Vibe-Trading"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/HKUDS/Vibe-Trading/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/HKUDS/Vibe-Trading/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "xbtlin/ai-berkshire",
+      "name": "AI Berkshire",
+      "category": "金融研究工具",
+      "intro": "供 Claude Code 與 Codex 使用的價值投資研究技能集，將公司、財報、產業與論點追蹤整理成結構化流程。",
+      "useCases": [
+        "研究財報與公司資料",
+        "比較不同分析視角並檢查財務數字"
+      ],
+      "features": [
+        "可重複使用的研究技能",
+        "多 agent 分工與觀點交叉檢查",
+        "金融數字與單位檢核工具"
+      ],
+      "setup": "安裝相容的 Claude Code 或 Codex，clone repo，再依客戶端執行對應 skills 安裝腳本；先以公開資料進行研究。",
+      "requirements": [
+        "相容的 AI coding agent",
+        "模型額度及資料來源存取"
+      ],
+      "warnings": [
+        "僅作技術與學習介紹，不構成投資建議。AI 結論與財務數字需獨立核實。",
+        "README 的自報報酬未獨立驗證，本目錄不採用為推薦依據。",
+        "深度多 agent 研究可能消耗較多 token；保留工具審核與權限界線。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/1027720792947301/"
+      ],
+      "verificationFlags": [
+        {
+          "type": "financial_risk",
+          "label": "金融研究風險",
+          "detail": "研究框架及 AI 報告不能取代獨立查核或專業意見。"
+        }
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:09:46Z",
+      "branch": "main",
+      "homepage": "https://github.com/xbtlin/ai-berkshire#readme",
+      "readmeSha": "e4d393e0623744ae17e3d633a0bf03cfd3d22295",
+      "githubUrl": "https://github.com/xbtlin/ai-berkshire",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/xbtlin/ai-berkshire"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/xbtlin/ai-berkshire/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/xbtlin/ai-berkshire/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1027720792947301/",
+          "postDate": "2026-06-28",
+          "relation": "具名推薦；以 README 的 Claude Code／Codex、價值投資研究與財務檢核核對"
+        }
+      ]
+    },
+    {
+      "repo": "antoinezambelli/forge",
+      "name": "forge",
+      "category": "Agent 工具呼叫",
+      "intro": "為 LLM 的工具呼叫補上解析、重試提示與回應驗證的 Python 框架，也能以代理服務接到既有 agent。",
+      "useCases": [
+        "改善本機模型的多步驟工具流程",
+        "替既有 agent 加上工具呼叫檢核"
+      ],
+      "features": [
+        "解析修復與重試提示",
+        "可選先決步驟與終止工具限制",
+        "Python library、middleware 與 proxy"
+      ],
+      "setup": "使用 Python 3.12 以上安裝 forge-guardrails，先啟動支援的本機或雲端模型後端，再定義工具與 WorkflowRunner；代理模式依專用文件設定。",
+      "requirements": [
+        "Python 3.12+",
+        "可用的 LLM 後端"
+      ],
+      "warnings": [
+        "效能提升是專案自有評測結果，不代表所有模型與工作負載都會相同。",
+        "主要加強單一 agent 內的工具迴圈，並非多 agent 協調平台。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0PviaX3HtsxGsmLEawYimmxefgf1pYezKbnuVGu7H9LSYfJKpSCNYBrgMwvG66DUAl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-01T01:05:25Z",
+      "branch": "main",
+      "homepage": null,
+      "readmeSha": "327b30ff66b203267311963f557628489f9be3f7",
+      "githubUrl": "https://github.com/antoinezambelli/forge",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/antoinezambelli/forge"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/antoinezambelli/forge/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/antoinezambelli/forge/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0PviaX3HtsxGsmLEawYimmxefgf1pYezKbnuVGu7H9LSYfJKpSCNYBrgMwvG66DUAl&id=100084639590584",
+          "postDate": "2026-05-23",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "Soul-AILab/SoulX-Podcast",
+      "name": "SoulX-Podcast",
+      "category": "語音生成",
+      "intro": "面向長篇、多輪、多講者播客的語音合成推論程式，支援中英語音、部分中文方言與笑聲、嘆氣等表達控制。",
+      "useCases": [
+        "合成經授權的多講者對話",
+        "研究長篇語音與方言 TTS"
+      ],
+      "features": [
+        "多輪多講者生成",
+        "零樣本聲音參考與方言支援",
+        "非語言發聲標記及 Web UI"
+      ],
+      "setup": "Linux 範例使用 Python 3.11 conda 環境，安裝 requirements 並下載官方模型，再執行對話範例或 webui.py；vLLM Docker 為選用加速路徑。",
+      "requirements": [
+        "Python 3.11 與模型執行環境",
+        "官方模型權重及足夠運算資源"
+      ],
+      "warnings": [
+        "聲音複製須取得授權；不可冒充、詐欺或誤導他人。",
+        "串流推論在 README 仍列為待辦。",
+        "GitHub 最近推送為 2025-12-11；公開未封存不等於近期持續更新。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/1449991606798706/"
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2025-12-11T12:48:46Z",
+      "branch": "main",
+      "homepage": null,
+      "readmeSha": "662e0fc9339e62ff87c81f1c9aeea8d8c3b2a9ae",
+      "githubUrl": "https://github.com/Soul-AILab/SoulX-Podcast",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/Soul-AILab/SoulX-Podcast"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Soul-AILab/SoulX-Podcast/blob/main/readme.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Soul-AILab/SoulX-Podcast/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1449991606798706/",
+          "postDate": "2026-05-26",
+          "relation": "具名推薦；官方 README 的播客、多講者、長篇語音定位吻合"
+        }
+      ]
+    },
+    {
+      "repo": "Egonex-AI/Understand-Anything",
+      "name": "Understand Anything",
+      "category": "程式碼理解",
+      "intro": "將程式碼、文件或知識庫轉成可互動的知識圖譜，搭配摘要、搜尋與導覽，協助理解結構、商業流程與變更影響。",
+      "useCases": [
+        "新人熟悉大型專案",
+        "檢視檔案依賴與修改影響"
+      ],
+      "features": [
+        "Tree-sitter 與 LLM 分析",
+        "互動圖譜與語意搜尋",
+        "漸進更新及多 coding agent 支援"
+      ],
+      "setup": "依使用的 agent 安裝插件或 skills，在專案執行分析後開啟 dashboard。首次分析可能涵蓋整個專案，之後預設增量更新。",
+      "requirements": [
+        "支援的 coding agent",
+        "可讀取的專案及模型額度"
+      ],
+      "warnings": [
+        "原始 Lum1104/Understand-Anything 已移至 Egonex-AI；新舊 repo ID 相同，確認為搬遷。",
+        "首次分析可能耗用大量 token；私有程式碼送模型前應確認資料政策。"
+      ],
+      "originalRepo": "Lum1104/Understand-Anything",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid034XQyj54iFor2fp7DzSJaqw6r2kKx5ogeuXuCHHnTt5ZWZrs73M9gb1ND3xpNNbB8l&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "repository_moved",
+          "label": "Repo 已搬遷",
+          "detail": "Lum1104 → Egonex-AI；GitHub repo ID 1182081931 一致。"
+        }
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T02:50:30Z",
+      "branch": "main",
+      "homepage": "https://understand-anything.com/",
+      "readmeSha": "129f27e2b2bae87d1b147b0355b37586b5045a81",
+      "githubUrl": "https://github.com/Egonex-AI/Understand-Anything",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/Egonex-AI/Understand-Anything"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"
+        },
+        {
+          "type": "original_repository_redirect",
+          "url": "https://api.github.com/repos/Lum1104/Understand-Anything",
+          "result": "Moved Permanently；repo ID 1182081931"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid034XQyj54iFor2fp7DzSJaqw6r2kKx5ogeuXuCHHnTt5ZWZrs73M9gb1ND3xpNNbB8l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "專門介紹直接連結舊址，另出現在當日每日彙整"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "karpathy/nn-zero-to-hero",
+      "name": "Neural Networks: Zero to Hero",
+      "category": "AI 學習",
+      "intro": "Andrej Karpathy 的神經網路實作課程資料，從反向傳播與字元語言模型逐步走到 GPT 與 tokenizer。",
+      "useCases": [
+        "建立神經網路與語言模型基礎",
+        "跟著影片與 notebook 實作"
+      ],
+      "features": [
+        "YouTube 講解搭配 Jupyter notebooks",
+        "micrograd、makemore 與 GPT 路徑",
+        "附練習與相關程式庫連結"
+      ],
+      "setup": "依 README 課程順序觀看影片，開啟 lectures 的 notebook；依各課程安裝 Python／PyTorch 等依賴。",
+      "requirements": [
+        "基本 Python 能力",
+        "基礎微積分概念及 notebook 環境"
+      ],
+      "warnings": [
+        "查核時最近推送為 2024-08-18；屬課程資料，不以更新頻率判定教學價值。",
+        "不同課程依賴需按該課範例確認。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02n7eYapYqWrjsF5LQWZg4hyPn36ncgej62UUQpMwW4hpjfwpyNJpTvba1nPgJBBJVl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2024-08-18T12:16:26Z",
+      "branch": "master",
+      "homepage": null,
+      "readmeSha": "d2b4851157b61aada28e5b6e00c9b99f1a771054",
+      "githubUrl": "https://github.com/karpathy/nn-zero-to-hero",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/karpathy/nn-zero-to-hero"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/karpathy/nn-zero-to-hero/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/karpathy/nn-zero-to-hero/blob/master/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02n7eYapYqWrjsF5LQWZg4hyPn36ncgej62UUQpMwW4hpjfwpyNJpTvba1nPgJBBJVl&id=100084639590584",
+          "postDate": "2026-05-23",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "k4yt3x/video2x",
+      "name": "Video2X",
+      "category": "影音處理",
+      "intro": "以機器學習與影像演算法進行影片升頻及補幀的工具，提供 Windows GUI、Linux 與容器使用路徑。",
+      "useCases": [
+        "放大授權影片或動畫素材",
+        "以補幀改善播放流暢度"
+      ],
+      "features": [
+        "升頻與補幀兩種模式",
+        "整合 Real-ESRGAN、Real-CUGAN、RIFE 等",
+        "使用 ncnn／Vulkan 與 C/C++ 管線"
+      ],
+      "setup": "依作業系統從官方 Releases 取得安裝包或 AppImage，先確認 CPU 與 Vulkan 支援，再依文件設定輸入、模型與輸出。",
+      "requirements": [
+        "支援 Vulkan 的 GPU",
+        "預編譯版本要求 AVX2 CPU",
+        "Windows 或 Linux 等官方支援環境"
+      ],
+      "warnings": [
+        "處理速度與畫質取決於硬體、模型及原片，可能產生人工痕跡。",
+        "只處理有權使用的影音素材。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/1278638027674732/"
+      ],
+      "license": "AGPL-3.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-03-07T15:39:42Z",
+      "branch": "master",
+      "homepage": "https://docs.video2x.org",
+      "readmeSha": "66f5e89f54388608aab274b42126f16394cb11d4",
+      "githubUrl": "https://github.com/k4yt3x/video2x",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/k4yt3x/video2x"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/k4yt3x/video2x/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/k4yt3x/video2x/blob/master/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1278638027674732/",
+          "postDate": "2026-05-23",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "name": "Claude Code Plugins Directory",
+      "category": "Agent 插件目錄",
+      "intro": "Anthropic 管理的 Claude Code 插件目錄，同時收錄自家插件與合作夥伴、社群的第三方插件。",
+      "useCases": [
+        "尋找 Claude Code 擴充功能",
+        "學習插件的標準結構"
+      ],
+      "features": [
+        "內部與外部插件分類",
+        "整合 Claude Code Discover 安裝流程",
+        "插件可含 commands、agents、skills 與 MCP"
+      ],
+      "setup": "在 Claude Code 的插件 Discover 介面挑選，或依 README 指定插件名稱與 marketplace 安裝；先查閱個別插件來源與要求。",
+      "requirements": [
+        "支援插件的 Claude Code",
+        "各插件可能有額外服務及權限需求"
+      ],
+      "warnings": [
+        "官方目錄仍含第三方元件，不保證所有 MCP、檔案或軟體的行為。",
+        "根目錄 LICENSE 為 Apache-2.0；README 要求逐一查看各插件授權。"
+      ],
+      "license": "Apache-2.0（個別插件另查）",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0ijQ6b5q6WMX7u39T3cKhzKP2buU9PEnAsS2HDqMqxvfevpq9itJi3vwnidWEGr6Al&id=100084639590584"
+      ],
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-05T20:13:22Z",
+      "branch": "main",
+      "homepage": "https://code.claude.com/docs/en/plugins",
+      "readmeSha": "43104e240ff500c762adebb0c31dc4b7ff7b50dd",
+      "githubUrl": "https://github.com/anthropics/claude-plugins-official",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/anthropics/claude-plugins-official"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/anthropics/claude-plugins-official/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0ijQ6b5q6WMX7u39T3cKhzKP2buU9PEnAsS2HDqMqxvfevpq9itJi3vwnidWEGr6Al&id=100084639590584",
+          "postDate": "2026-05-20",
+          "relation": "每日彙整條目，另有 2026-05-20 專門介紹"
+        }
+      ]
+    },
+    {
+      "repo": "rohitg00/ai-engineering-from-scratch",
+      "name": "AI Engineering from Scratch",
+      "category": "AI 學習",
+      "intro": "從數學、神經網路一路延伸到 agent 與部署的實作課程，強調推導、編碼、測試與保留可運行成果。",
+      "useCases": [
+        "系統學習 AI 工程基礎",
+        "用小型實作檢驗模型及 agent 概念"
+      ],
+      "features": [
+        "分階段課程與逐課實作",
+        "Python、TypeScript、Rust、Julia 範例",
+        "可選 agent 學習技能與進度記錄"
+      ],
+      "setup": "可直接閱讀網站與課程文件；需執行範例時 clone repo，依各課安裝工具。也可安裝課程 skills 供支援的 agent 使用。",
+      "requirements": [
+        "基本程式設計能力",
+        "各課指定的語言與執行環境"
+      ],
+      "warnings": [
+        "課程規模與內容持續變動；實作環境依個別單元確認。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:00:22Z",
+      "branch": "main",
+      "homepage": "https://aiengineeringfromscratch.com",
+      "readmeSha": "5f9cf5442524450d55646ee29c40033718780ccb",
+      "githubUrl": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/rohitg00/ai-engineering-from-scratch"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+          "postDate": "2026-05-22",
+          "relation": "每週彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "Fincept-Corporation/FinceptTerminal",
+      "name": "Fincept Terminal",
+      "category": "金融研究工具",
+      "intro": "整合市場資料、財務分析、AI 研究與模擬交易的桌面終端。公開版以 C++／Qt 與內嵌 Python 建構，與私有 Enterprise 版分開發行。",
+      "useCases": [
+        "探索行情與經濟資料",
+        "研究財務分析、回測與模擬交易工具"
+      ],
+      "features": [
+        "桌面分析介面與資料連接器",
+        "自備模型的 AI 研究",
+        "回測、紙上交易與工作流程工具"
+      ],
+      "setup": "從官方 Releases 下載相符平台的公開版；自行編譯需依指南使用固定版本的 Qt、CMake、Ninja 與 Python。再按需求設定資料與模型來源。",
+      "requirements": [
+        "官方支援的 Windows／Linux／macOS",
+        "選用資料與 LLM 服務憑證及額度"
+      ],
+      "warnings": [
+        "僅作技術介紹，不構成投資建議；資料、計算及 AI 結論須獨立查核。",
+        "README 表明開源版改為每月發布，日常主力開發在私有 Enterprise。",
+        "資料與模型可能另收費；公開版與 Enterprise 功能不可混為一談。"
+      ],
+      "license": "AGPL-3.0-or-later",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "financial_risk",
+          "label": "金融研究風險",
+          "detail": "資料與分析須獨立驗證，模擬結果不保證未來。"
+        },
+        {
+          "type": "maintenance_cadence",
+          "label": "每月發布",
+          "detail": "README 說明公開版每月更新，Enterprise 為日常開發重心。"
+        }
+      ],
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-01T08:59:02Z",
+      "branch": "main",
+      "homepage": "https://fincept.in",
+      "readmeSha": "6b0f3061ca99128fe97e0a0afbc64ebe4a801aa0",
+      "githubUrl": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/Fincept-Corporation/FinceptTerminal"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Fincept-Corporation/FinceptTerminal/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Fincept-Corporation/FinceptTerminal/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "name": "Chrome DevTools MCP",
+      "category": "瀏覽器開發工具",
+      "intro": "讓 coding agent 透過 MCP 操控及檢查 Chrome，取得效能 trace、網路請求、console 與截圖，協助除錯和自動化測試。",
+      "useCases": [
+        "分析網頁效能與載入問題",
+        "讓 agent 重現並檢查前端行為"
+      ],
+      "features": [
+        "DevTools 效能診斷",
+        "網路與 console 檢查",
+        "以 Puppeteer 執行瀏覽器操作"
+      ],
+      "setup": "準備 Node.js LTS、npm 及最新版 Chrome，在 MCP client 加入 chrome-devtools-mcp 啟動設定，再用無敏感資料的頁面測試。",
+      "requirements": [
+        "Node.js LTS、npm",
+        "受支援的 Google Chrome 或 Chrome for Testing",
+        "MCP client"
+      ],
+      "warnings": [
+        "會讓 MCP client 存取瀏覽器內容與可修改資料，請隔離敏感帳號。",
+        "使用統計預設開啟，可透過 --no-usage-statistics 或對應環境變數關閉。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "telemetry_default_on",
+          "label": "使用統計預設開啟",
+          "detail": "可依 README 關閉；與 Chrome 本身的統計設定各自獨立。"
+        }
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:02:53Z",
+      "branch": "main",
+      "homepage": "https://developer.chrome.com/docs/devtools/agents",
+      "readmeSha": "b08e3f4d7c36b090fba41d5307696f9a2cc3f276",
+      "githubUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/ChromeDevTools/chrome-devtools-mcp"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "mukul975/Anthropic-Cybersecurity-Skills",
+      "name": "Anthropic Cybersecurity Skills",
+      "category": "資安學習與防禦",
+      "intro": "以 Agent Skills 格式整理的社群資安技能庫，涵蓋調查、鑑識、防禦及治理等主題，並對應多種資安框架。",
+      "useCases": [
+        "整理授權資安調查的步驟與證據",
+        "學習防禦、治理與框架對照"
+      ],
+      "features": [
+        "結構化技能文件",
+        "映射 MITRE 與 NIST 等框架",
+        "支援多種 Agent Skills 相容工具"
+      ],
+      "setup": "先閱讀所需技能內容，可 clone repo 作參考；要交給 agent 使用時，再依官方 README 安裝精選技能並確認工具與權限。",
+      "requirements": [
+        "閱讀文件只需瀏覽器",
+        "執行時需相容 agent 與各技能依賴"
+      ],
+      "warnings": [
+        "這是 mukul975 的社群專案，README 明確聲明不隸屬 Anthropic。",
+        "只在自己擁有或明確授權的環境使用；框架映射不代表安全保證。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "unofficial",
+          "label": "社群專案",
+          "detail": "名稱含 Anthropic，但 README 聲明與 Anthropic PBC 無隸屬關係。"
+        }
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-08-31T04:32:44Z",
+      "branch": "main",
+      "homepage": "https://mahipal.engineer/Anthropic-Cybersecurity-Skills/",
+      "readmeSha": "4ffd7dae8a99566c23dc259725b280b34bc75d09",
+      "githubUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/mukul975/Anthropic-Cybersecurity-Skills"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "trimstray/the-book-of-secret-knowledge",
+      "name": "The Book of Secret Knowledge",
+      "category": "系統與開發知識",
+      "intro": "將系統管理、網路、DevOps 與資安相關的手冊、速查表、文章和工具集中整理的參考清單。",
+      "useCases": [
+        "搜尋日常維運與除錯參考",
+        "擴充系統及網路管理知識"
+      ],
+      "features": [
+        "按主題分類的資源索引",
+        "CLI／網頁工具與速查資料",
+        "面向管理員、DevOps 及安全研究者"
+      ],
+      "setup": "直接閱讀 README 的目錄與分類連結即可；它不是需整包安裝的應用程式。使用任何範例前先確認版本、作用與授權。",
+      "requirements": [
+        "閱讀只需瀏覽器",
+        "執行範例的環境依工具而定"
+      ],
+      "warnings": [
+        "最近推送為 2024-11-19，外部連結與命令可能過時。",
+        "部分範例會修改系統或涉及資安測試，須先審閱並限於授權範圍。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2024-11-19T14:00:38Z",
+      "branch": "master",
+      "homepage": null,
+      "readmeSha": "2c1b9e4ee145961275b20df550d190446a65e579",
+      "githubUrl": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/trimstray/the-book-of-secret-knowledge"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/LICENSE.md"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "presenton/presenton",
+      "name": "Presenton",
+      "category": "簡報製作",
+      "intro": "從提示、文件或既有設計產生簡報的自架工具，提供可編輯版面與 PowerPoint／PDF 匯出，也可透過 API 整合。",
+      "useCases": [
+        "將草稿或文件整理成簡報",
+        "建立可重複的簡報生成流程"
+      ],
+      "features": [
+        "自選模型與範本",
+        "拖曳編輯及自訂設計",
+        "PPTX／PDF 匯出與 API"
+      ],
+      "setup": "可使用 Docker 或官方桌面版；在介面設定模型與圖像提供者。若從 Electron 原始碼開發，需 Node.js LTS、Python 3.11、npm 與 uv。",
+      "requirements": [
+        "Docker 或支援的桌面環境",
+        "所選模型及圖像服務設定"
+      ],
+      "warnings": [
+        "生成內容、資料與排版需人工校對。",
+        "連雲端模型時，輸入文件與提示可能傳送至該提供者。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584"
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-05T12:28:04Z",
+      "branch": "main",
+      "homepage": "https://presenton.ai",
+      "readmeSha": "c710b98c44e7f4c22b3e83a26c0d8e12f25dcaca",
+      "githubUrl": "https://github.com/presenton/presenton",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/presenton/presenton"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/presenton/presenton/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/presenton/presenton/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vjwUeUdWDSLsSH1L6j67wPGU2F6FkwjgjNZnKRCazTh1HKaxYF87RE3CTTYxbgP5l&id=100084639590584",
+          "postDate": "2026-05-24",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "teng-lin/notebooklm-py",
+      "name": "notebooklm-py",
+      "category": "研究自動化",
+      "intro": "透過 Python、CLI 或 agent 操作 NotebookLM 的社群介面，可管理筆記本與來源、查詢內容並生成或下載研究產物。",
+      "useCases": [
+        "批次整理研究來源與筆記",
+        "將音訊摘要、簡報等產物串進研究流程"
+      ],
+      "features": [
+        "筆記本與來源管理",
+        "內容查詢與多種產物生成",
+        "Python、CLI 與 agent skill"
+      ],
+      "setup": "使用 uv tool 或 pipx 安裝 notebooklm-py[browser]，依 README 在瀏覽器登入自己的 Google 帳戶並檢查驗證，再以測試筆記本使用。",
+      "requirements": [
+        "Python 3.10–3.14",
+        "具服務存取權的 Google 帳戶",
+        "瀏覽器登入環境"
+      ],
+      "warnings": [
+        "非 Google 官方專案，使用未公開 API，服務更動可能造成失效或限流。",
+        "登入資料與來源文件具敏感性；應先審閱驗證儲存及上傳行為。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02XEEVZmFjfeFkatBNDuRPVCUuRD6x6EnC16rHpqAmTiDwEEUoDKjR6bVN4XjZ6xu5l&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "unofficial_api",
+          "label": "非官方 API",
+          "detail": "使用未公開端點，可能隨服務更新失效。"
+        }
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T11:45:55Z",
+      "branch": "main",
+      "homepage": "https://github.com/teng-lin/notebooklm-py",
+      "readmeSha": "db0f942cf57fa3b8368bf4c6ddfec9e44c571ce3",
+      "githubUrl": "https://github.com/teng-lin/notebooklm-py",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/teng-lin/notebooklm-py"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/teng-lin/notebooklm-py/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/teng-lin/notebooklm-py/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02XEEVZmFjfeFkatBNDuRPVCUuRD6x6EnC16rHpqAmTiDwEEUoDKjR6bVN4XjZ6xu5l&id=100084639590584",
+          "postDate": "2026-05-23",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "OpenBMB/VoxCPM",
+      "name": "VoxCPM / VoxCPM2",
+      "category": "語音生成",
+      "intro": "直接生成連續語音表示的 TTS 系統；目前 README 主推 VoxCPM2，支援多語言、文字描述音色與參考聲音複製。",
+      "useCases": [
+        "產生多語言配音",
+        "研究可控音色與經授權的聲音合成"
+      ],
+      "features": [
+        "Tokenizer-free 語音生成",
+        "文字描述音色與風格控制",
+        "參考音訊複製、CLI 與 Python API"
+      ],
+      "setup": "依 README 安裝 voxcpm，取得官方模型權重，使用 Python API 或 CLI 推論；生產部署與端側推論需走各自文件。",
+      "requirements": [
+        "主要 Python 路徑要求 3.10–3.12",
+        "PyTorch 2.5+、CUDA 12+ 及相符硬體"
+      ],
+      "warnings": [
+        "貼文時點早於目前 VoxCPM2；本卡內容依查核日 README 更新。",
+        "聲音複製須取得授權，合成內容應清楚標記，不能冒充或詐欺。",
+        "模型輸出穩定性與正式部署能力須依情境測試。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0tkHdj5GLWDFYNbVcUmJKfLJBfosS6BptwoEcRcNnHxJL6jRcUVqa574nxdj6YKwol&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584"
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-30T03:52:48Z",
+      "branch": "main",
+      "homepage": "https://voxcpm.com",
+      "readmeSha": "2d9880eda3ae1d2d1288ce0edfd4f53782792d8c",
+      "githubUrl": "https://github.com/OpenBMB/VoxCPM",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/OpenBMB/VoxCPM"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/OpenBMB/VoxCPM/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/OpenBMB/VoxCPM/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0tkHdj5GLWDFYNbVcUmJKfLJBfosS6BptwoEcRcNnHxJL6jRcUVqa574nxdj6YKwol&id=100084639590584",
+          "postDate": "2026-05-22",
+          "relation": "專門介紹直接連結，另出現在同日每週彙整"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+          "postDate": "2026-05-22",
+          "relation": "每週彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "googleworkspace/cli",
+      "name": "gws / Google Workspace CLI",
+      "category": "工作自動化",
+      "intro": "以一個命令列介面操作 Google Workspace API，涵蓋 Drive、Gmail、Calendar、Docs 等，提供結構化 JSON 輸出供人與 agent 使用。",
+      "useCases": [
+        "以腳本查詢 Workspace 資料",
+        "將日曆、文件與郵件 API 接入 agent"
+      ],
+      "features": [
+        "從 Google Discovery 動態建立命令",
+        "JSON 輸出、分頁與 dry-run",
+        "附 agent skills"
+      ],
+      "setup": "依 README 下載預編譯 binary，或用 npm／Homebrew 安裝。準備 Google Cloud OAuth 設定，登入自己的帳戶並只授予任務所需範圍。",
+      "requirements": [
+        "Google 帳戶及 Cloud project",
+        "npm 路徑需 Node.js 18+"
+      ],
+      "warnings": [
+        "README 明列不是 Google 官方支援產品，且 v1.0 前可能有破壞性變更。",
+        "可讀寫郵件與文件，OAuth 範圍及發送／分享操作需謹慎。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/2777574795954703/"
+      ],
+      "verificationFlags": [
+        {
+          "type": "not_officially_supported",
+          "label": "非官方支援產品",
+          "detail": "雖位於 googleworkspace 組織，README 明確聲明非 Google 官方支援產品。"
+        }
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:09:56Z",
+      "branch": "main",
+      "homepage": "https://developers.google.com/workspace",
+      "readmeSha": "04c532d0a6936d06d96c0572771feba4274a834e",
+      "githubUrl": "https://github.com/googleworkspace/cli",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/googleworkspace/cli"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/googleworkspace/cli/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/googleworkspace/cli/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2777574795954703/",
+          "postDate": "2026-06-26",
+          "relation": "具名 Google Workspace CLI；API 與命令列用途匹配"
+        }
+      ]
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "name": "OpenMontage",
+      "category": "影片製作",
+      "intro": "將 AI coding assistant 接到影片製作流程，串連研究、腳本、素材、旁白、字幕、合成與品質檢查。",
+      "useCases": [
+        "製作解說影片與產品示範",
+        "建立可重複的影音製作流程"
+      ],
+      "features": [
+        "多種影片製作 pipeline",
+        "FFmpeg 與 Remotion／HyperFrames 合成",
+        "可選本機旁白及多家影音 API"
+      ],
+      "setup": "準備 Python 3.10+、Node.js 18+、FFmpeg 與 coding agent，clone repo 後依 setup 文件安裝。按所需功能設定模型或素材 API，先設定預算與素材使用範圍。",
+      "requirements": [
+        "Python 3.10+、Node.js 18+、FFmpeg",
+        "相容 AI coding assistant"
+      ],
+      "warnings": [
+        "生成與第三方 API 可能收費，不能將部分免 key 路徑理解成所有功能免費。",
+        "素材、聲音及影像需符合使用權限；生成內容與字幕仍須校對。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/27647904088156137/"
+      ],
+      "license": "AGPL-3.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-03T16:28:55Z",
+      "branch": "main",
+      "homepage": "https://www.openmontage.video/",
+      "readmeSha": "b4612e95d34f3820253c96e48582a9c3a8113815",
+      "githubUrl": "https://github.com/calesthio/OpenMontage",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/calesthio/OpenMontage"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/calesthio/OpenMontage/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/calesthio/OpenMontage/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/27647904088156137/",
+          "postDate": "2026-06-24",
+          "relation": "具名 AI coding assistant 影片製作流程與官方 README 吻合"
+        }
+      ]
+    },
+    {
+      "repo": "headroomlabs-ai/headroom",
+      "name": "Headroom",
+      "category": "LLM 上下文管理",
+      "intro": "在內容送進 LLM 前壓縮工具輸出、日誌、檔案與 RAG 片段，提供函式庫、代理服務及 MCP 介面，並保存可回取的原始內容。",
+      "useCases": [
+        "减少冗長工具輸出的上下文負擔",
+        "觀察 coding agent 的 token 使用"
+      ],
+      "features": [
+        "Python／TypeScript library",
+        "本機 proxy、agent wrap 與 MCP",
+        "本機原文快取與取回"
+      ],
+      "setup": "Python 3.10+ 可安裝 headroom-ai，再選 inline library、proxy 或 wrap 模式並執行 doctor；npm 套件僅提供 TypeScript SDK，不含 CLI。",
+      "requirements": [
+        "Python 3.10+ 或 TypeScript 開發環境",
+        "支援的模型／agent 接入設定"
+      ],
+      "warnings": [
+        "壓縮比例取決於資料，不能保證不影響所有任務的結果。",
+        "匿名 beacon 預設開啟；可用 HEADROOM_BEACON=off、DO_NOT_TRACK=1 或 --offline 關閉。",
+        "wrap 模式可能加入其他 MCP 元件，啟用前應檢查設定變更。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/1659238371849795/"
+      ],
+      "verificationFlags": [
+        {
+          "type": "telemetry_default_on",
+          "label": "匿名統計預設開啟",
+          "detail": "README 列出上報壓縮比例、計數、模型與環境資訊，以及停用方式。"
+        }
+      ],
+      "license": "Apache-2.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:30:54Z",
+      "branch": "main",
+      "homepage": "https://docs.headroomlabs.ai/docs",
+      "readmeSha": "ed379c49ac40030eb07830c38efed76445151d6b",
+      "githubUrl": "https://github.com/headroomlabs-ai/headroom",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/headroomlabs-ai/headroom"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/headroomlabs-ai/headroom/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/headroomlabs-ai/headroom/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1659238371849795/",
+          "postDate": "2026-06-24",
+          "relation": "貼文描述 Python／TS、proxy、MCP 與工具輸出壓縮，與 repo 匹配"
+        }
+      ]
+    },
+    {
+      "repo": "1jehuang/jcode",
+      "name": "jcode",
+      "category": "Coding Agent",
+      "intro": "以 Rust 建構的 coding agent 執行框架，整合終端介面、跨 session 記憶與多 agent 協作，提供常駐服務及非互動模式。",
+      "useCases": [
+        "在同一專案管理多個 agent 工作階段",
+        "保留開發脈絡並接入不同模型"
+      ],
+      "features": [
+        "TUI 及 server／client 模式",
+        "記憶檢索與 session 搜尋",
+        "Swarm 協作與工具介面"
+      ],
+      "setup": "從官方安裝器或 Releases 取得相符版本，設定可用模型提供者後啟動 jcode；也能以 Rust 原始碼編譯。",
+      "requirements": [
+        "官方支援的作業系統",
+        "模型帳戶或 API 設定；自建需 Rust"
+      ],
+      "warnings": [
+        "記憶、檔案及憑證來源應先確認權限。",
+        "效能與 RAM 數字是專案測試，未在此實測。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/2089411931919337/"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T04:22:49Z",
+      "branch": "master",
+      "homepage": "https://jcode.sh",
+      "readmeSha": "577bd28ce910bb21331634e9d966adb72d61d21b",
+      "githubUrl": "https://github.com/1jehuang/jcode",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/1jehuang/jcode"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/1jehuang/jcode/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/1jehuang/jcode/blob/master/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2089411931919337/",
+          "postDate": "2026-06-21",
+          "relation": "具名多 session coding workbench 與效能特色，與 README 匹配"
+        }
+      ]
+    },
+    {
+      "repo": "Imbad0202/academic-research-skills",
+      "name": "Academic Research Skills",
+      "category": "學術研究",
+      "intro": "將文獻研究、論文規劃、撰寫、審閱與修訂串成有人參與決策的 Claude Code 技能流程。",
+      "useCases": [
+        "規劃論文結構與文獻研究",
+        "整理審閱意見、引用與修訂紀錄"
+      ],
+      "features": [
+        "研究、寫作與審稿技能",
+        "管線狀態與證據記錄",
+        "可選 DOCX／PDF 輸出"
+      ],
+      "setup": "使用相容 Claude Code 版本，依 README 加入 marketplace 安裝插件。Markdown 可直接使用；DOCX／PDF 另需 Pandoc、tectonic 等依賴。",
+      "requirements": [
+        "Claude Code 與模型存取",
+        "選用文書輸出工具"
+      ],
+      "warnings": [
+        "授權為 CC BY-NC 4.0，含非商用限制。",
+        "引用、研究結論與審查意見須由研究者核實，不能替代實際學術審核。"
+      ],
+      "license": "CC-BY-NC-4.0",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid09bjjKhsf5LhQmor7MmxvmBXxy5ZjoexRGmaxSj12kgEv1BbjxrEC6LsJLJgQjnrol&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "noncommercial_license",
+          "label": "非商用授權",
+          "detail": "LICENSE 為 Creative Commons Attribution-NonCommercial 4.0。"
+        }
+      ],
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-03T14:29:44Z",
+      "branch": "main",
+      "homepage": "https://buymeacoffee.com/crucify020v",
+      "readmeSha": "5e54bf1d67f26d5a393695df47a0f2da393013ac",
+      "githubUrl": "https://github.com/Imbad0202/academic-research-skills",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/Imbad0202/academic-research-skills"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid09bjjKhsf5LhQmor7MmxvmBXxy5ZjoexRGmaxSj12kgEv1BbjxrEC6LsJLJgQjnrol&id=100084639590584",
+          "postDate": "2026-05-20",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "name": "llama.cpp",
+      "category": "本機模型推論",
+      "intro": "以 C/C++ 執行 LLM 推論的工具與函式庫，支援多種硬體後端及量化模型，提供 CLI 與相容 OpenAI 格式的服務端。",
+      "useCases": [
+        "在自有硬體執行支援的模型",
+        "為應用提供本機推論 API"
+      ],
+      "features": [
+        "CPU／GPU 多後端",
+        "量化與 GGUF 模型流程",
+        "CLI、server 與函式庫"
+      ],
+      "setup": "依平台安裝官方 binary 或編譯，取得相容模型，再以 CLI 或 server 啟動。先按模型大小確認記憶體、後端與硬體支援。",
+      "requirements": [
+        "相容硬體與足夠記憶體",
+        "對應模型檔案"
+      ],
+      "warnings": [
+        "程式碼 MIT 不等於模型權重也採 MIT；每個模型需另查授權。",
+        "推論品質與速度受模型、量化及硬體影響。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02E6e4otgBMk6tqFo1P51bDor2W2fRjQcTUnyRQ9JSJwhBrz3BU5y4N8bwddJRdsWwl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:25:40Z",
+      "branch": "master",
+      "homepage": "https://llama.app",
+      "readmeSha": "a524b3d6a8dafe1b913e8aef2e41b3bed5ae2c02",
+      "githubUrl": "https://github.com/ggml-org/llama.cpp",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/ggml-org/llama.cpp"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ggml-org/llama.cpp/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ggml-org/llama.cpp/blob/master/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02E6e4otgBMk6tqFo1P51bDor2W2fRjQcTUnyRQ9JSJwhBrz3BU5y4N8bwddJRdsWwl&id=100084639590584",
+          "postDate": "2026-05-19",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "name": "Daily Stock Analysis",
+      "category": "金融研究工具",
+      "intro": "彙整多市場行情與新聞，利用 LLM 產生分析報告與看板，並支援排程、Web 介面及多種通知管道。",
+      "useCases": [
+        "整理市場資料與新聞摘要",
+        "研究可排程的報告生成流程"
+      ],
+      "features": [
+        "多源行情與新聞整合",
+        "Web／桌面工作台與歷史報告",
+        "本機、Docker、GitHub Actions 部署"
+      ],
+      "setup": "依 README clone repo、安裝 Python requirements 並設定環境變數；先手動測試，再按需要設定排程或通知。",
+      "requirements": [
+        "Python 3.10+ 或 Docker",
+        "模型及選用資料服務設定"
+      ],
+      "warnings": [
+        "僅作技術介紹，不構成投資建議；買賣訊號、計算及 AI 結論可能錯誤。",
+        "免費資料源可能限流或變動；模型與資料服務不一定免費。",
+        "通知與雲端部署可能傳送金融資料，需檢查收件方與憑證。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0muXXznK7jiKVNeF2rpsS6AVr2SJQhZJU8jhixqjFozH1XdJhPAimHM3idd1f4RCCl&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "financial_risk",
+          "label": "金融分析需核實",
+          "detail": "AI 報告與交易訊號不能取代獨立判斷。"
+        }
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-05T07:52:27Z",
+      "branch": "main",
+      "homepage": "https://dsa.zhulinsen.tech",
+      "readmeSha": "230d26a7858ad28550d047f915f1cb3bb063b4aa",
+      "githubUrl": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/ZhuLinsen/daily_stock_analysis"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0muXXznK7jiKVNeF2rpsS6AVr2SJQhZJU8jhixqjFozH1XdJhPAimHM3idd1f4RCCl&id=100084639590584",
+          "postDate": "2026-05-19",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "yt-dlp/yt-dlp",
+      "name": "yt-dlp",
+      "category": "影音處理",
+      "intro": "功能豐富的命令列影音下載工具，可選擇格式、字幕與輸出命名，並配合 FFmpeg 進行合併和後處理。",
+      "useCases": [
+        "保存有下載權限的影音",
+        "批次處理授權字幕及媒體檔案"
+      ],
+      "features": [
+        "多網站 extractor",
+        "格式與字幕選擇",
+        "可配置的輸出與後處理"
+      ],
+      "setup": "從官方 Releases 取得 binary，或在支援的 Python 環境安裝；FFmpeg／ffprobe 及支援的 JavaScript runtime 為常用選配依賴。",
+      "requirements": [
+        "binary 或 Python 3.10+",
+        "部分格式處理需 FFmpeg"
+      ],
+      "warnings": [
+        "只下載有權保存的內容，遵守網站條款及著作權，不用於規避付費或存取限制。",
+        "內含依賴與發行 binary 可能另有授權，不能只看核心 Unlicense。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/1327982115942691/"
+      ],
+      "license": "Unlicense",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-27T22:09:13Z",
+      "branch": "master",
+      "homepage": "https://discord.gg/H5MNcFW63r",
+      "readmeSha": "d15d9a96829bcd7c16afddc7244e2a9f95a53403",
+      "githubUrl": "https://github.com/yt-dlp/yt-dlp",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/yt-dlp/yt-dlp"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/yt-dlp/yt-dlp/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/yt-dlp/yt-dlp/blob/master/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1327982115942691/",
+          "postDate": "2026-05-20",
+          "relation": "貼文明確具名；官方 repo 名稱及影音下載用途吻合"
+        }
+      ]
+    },
+    {
+      "repo": "sansan0/TrendRadar",
+      "name": "TrendRadar",
+      "category": "新聞與趨勢",
+      "intro": "聚合多平台熱點與 RSS，以關鍵字及選用 AI 篩選、翻譯和分析內容，再傳送到指定通知管道。",
+      "useCases": [
+        "追蹤特定議題與新聞",
+        "減少重複資訊並產生摘要"
+      ],
+      "features": [
+        "熱點與 RSS 聚合",
+        "關鍵字／AI 篩選",
+        "MCP 與多通知管道"
+      ],
+      "setup": "依 README 選 Docker、本機或 Actions 部署，設定來源與關鍵字；需要 AI 分析或通知時再加入相應服務設定。",
+      "requirements": [
+        "所選部署環境",
+        "選用 LLM 及通知管道設定"
+      ],
+      "warnings": [
+        "摘要及情緒／趨勢判讀需回看原始來源。",
+        "外部來源可能限流，推送需正確設定收件方與密鑰。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/2001049070491220/",
+        "https://www.facebook.com/reel/1686294069176670/"
+      ],
+      "license": "GPL-3.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-13T06:38:25Z",
+      "branch": "master",
+      "homepage": "https://trendradar.sandev.cc",
+      "readmeSha": "7b5bc5898f77381084333104b4925ca396cec2b3",
+      "githubUrl": "https://github.com/sansan0/TrendRadar",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/sansan0/TrendRadar"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/sansan0/TrendRadar/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/sansan0/TrendRadar/blob/master/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2001049070491220/",
+          "postDate": "2026-05-19",
+          "relation": "同日兩則具名推薦；以官方熱點／RSS 工具定位核對"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1686294069176670/",
+          "postDate": "2026-05-19",
+          "relation": "同日兩則具名推薦；以官方熱點／RSS 工具定位核對"
+        }
+      ]
+    },
+    {
+      "repo": "KeygraphHQ/shannon",
+      "name": "Shannon",
+      "category": "資安測試",
+      "intro": "以來源碼與執行中的應用程式為上下文，協助自動化 Web／API 安全測試與整理可供人工審閱的發現。",
+      "useCases": [
+        "在授權測試環境檢查應用程式安全",
+        "將安全檢查整合進開發與 CI 流程"
+      ],
+      "features": [
+        "來源碼輔助分析",
+        "自動化驗證與報告",
+        "本機工具及 CI 整合"
+      ],
+      "setup": "依 README 準備 Docker、Node.js 18+ 與模型提供者設定，先定義測試範圍，僅在可拋棄資料的本機或 staging 環境部署。",
+      "requirements": [
+        "Docker、Node.js 18+",
+        "明確測試授權及隔離環境",
+        "模型提供者存取"
+      ],
+      "warnings": [
+        "不是被動掃描器，可能建立使用者、送出表單或修改系統狀態。",
+        "只可測試自有或取得明確授權的目標；報告仍須人工驗證。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0MAWKwj6Wxqx5nnajw4gGHP7vKcYEQUCx3nrhNXFTnBRukwcsJWUVoyc8SLuXASTRl&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "authorized_testing_only",
+          "label": "僅限授權測試",
+          "detail": "具有主動操作能力，可能修改目標系統狀態。"
+        }
+      ],
+      "license": "AGPL-3.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T14:56:27Z",
+      "branch": "main",
+      "homepage": "https://keygraph.io/",
+      "readmeSha": "7da170342cc882bc10551f82959d298caec971f4",
+      "githubUrl": "https://github.com/KeygraphHQ/shannon",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/KeygraphHQ/shannon"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/KeygraphHQ/shannon/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/KeygraphHQ/shannon/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0MAWKwj6Wxqx5nnajw4gGHP7vKcYEQUCx3nrhNXFTnBRukwcsJWUVoyc8SLuXASTRl&id=100084639590584",
+          "postDate": "2026-05-19",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "microsoft/ai-agents-for-beginners",
+      "name": "AI Agents for Beginners",
+      "category": "AI 學習",
+      "intro": "Microsoft 的 AI agent 入門課程，透過講解、影片與程式範例介紹常見設計模式及工具使用。",
+      "useCases": [
+        "學習 agent 基本架構",
+        "以範例理解工具、記憶與協作模式"
+      ],
+      "features": [
+        "分主題課程與多語言內容",
+        "Python 範例",
+        "Agent Framework 與 Foundry 實作"
+      ],
+      "setup": "先閱讀 Course Setup，再選課程及 code_samples；目前主要範例使用 Microsoft Agent Framework 與 Foundry，依課程設定模型服務。",
+      "requirements": [
+        "基本程式概念",
+        "主要雲端實作需 Azure 帳戶"
+      ],
+      "warnings": [
+        "雲端服務可能有費用；版本與服務要求以各課為準。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02cuB38xsp5KJck4DR1avbW6y38nfk2WLwLd7mJfR5tGa37quFHiRLb426g1p6A2jal&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-19T06:16:49Z",
+      "branch": "main",
+      "homepage": "https://aka.ms/ai-agents-beginners",
+      "readmeSha": "251886b06049fd4fad4fbd543bb6ae86661b1a9d",
+      "githubUrl": "https://github.com/microsoft/ai-agents-for-beginners",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/microsoft/ai-agents-for-beginners"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02cuB38xsp5KJck4DR1avbW6y38nfk2WLwLd7mJfR5tGa37quFHiRLb426g1p6A2jal&id=100084639590584",
+          "postDate": "2026-05-19",
+          "relation": "貼文直接連結"
+        }
+      ]
+    },
+    {
+      "repo": "github/spec-kit",
+      "name": "Spec Kit",
+      "category": "軟體開發流程",
+      "intro": "提供 AI coding agent 可重複使用的規格、規劃與實作流程，也有 bug 修復及想法評估入口，讓決策與驗證留下文件。",
+      "useCases": [
+        "先釐清規格再實作功能",
+        "把問題修復與驗證流程結構化"
+      ],
+      "features": [
+        "規格驅動開發",
+        "可重用模板與文件",
+        "多 coding agent 整合"
+      ],
+      "setup": "需 Python 3.11+、uv 與支援的 agent。安裝 specify-cli，初始化或導入既有專案，再依選定流程逐步使用。",
+      "requirements": [
+        "Python 3.11+、uv",
+        "支援的 coding agent"
+      ],
+      "warnings": [
+        "流程文件不能替代實際測試與程式碼審閱。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/2470955293361842/"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T14:47:43Z",
+      "branch": "main",
+      "homepage": "https://github.github.com/spec-kit/",
+      "readmeSha": "4b463b2e599a2e8881b898ac7a4701fb23c0c91c",
+      "githubUrl": "https://github.com/github/spec-kit",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/github/spec-kit"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/github/spec-kit/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/github/spec-kit/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2470955293361842/",
+          "postDate": "2026-05-16",
+          "relation": "貼文明確為 GitHub 的 spec-kit，primary repo 與授權署名吻合"
+        }
+      ]
+    },
+    {
+      "repo": "NVIDIA-AI-Blueprints/video-search-and-summarization",
+      "name": "NVIDIA Video Search and Summarization",
+      "category": "影片分析",
+      "intro": "結合視覺語言模型、RAG 與 NVIDIA NIM 的參考架構，用自然語言搜尋、摘要及詢問即時或已錄製影片。",
+      "useCases": [
+        "檢索長篇影片片段",
+        "建立可人工核對的視覺問答與報告"
+      ],
+      "features": [
+        "影片搜尋與摘要",
+        "視覺問答及警報驗證",
+        "GPU 加速參考部署"
+      ],
+      "setup": "先對照官方 GPU 與系統拓樸要求，準備 NVIDIA 服務與授權，依版本化 NGC 映像或 Docker Compose 部署；不要把 develop 映像當正式版。",
+      "requirements": [
+        "相容 NVIDIA GPU／部署環境",
+        "NVIDIA API／NGC 存取；本機 NIM 另有授權要求"
+      ],
+      "warnings": [
+        "模型對畫面與事件的解讀可能錯誤，警報與摘要需人工核對。",
+        "影片資料可能涉及隱私與監控規範。",
+        "主要程式 Apache-2.0，部分配置為 SSPLv1／AGPLv3 雙授權，模型與服務另有條款。"
+      ],
+      "license": "Apache-2.0；部分配置 SSPLv1／AGPLv3",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0TRXAPPqNs1hB8zY7JJVkssqP5Vpxi8ms7vnYVngnBWQpaCxPqmSqmihyLd8qf2Xml&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "mixed_license",
+          "label": "元件授權各異",
+          "detail": "LICENSE 列出 Apache 主體與 SSPL／AGPL 配置例外；NIM／模型另查。"
+        }
+      ],
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T15:19:38Z",
+      "branch": "develop",
+      "homepage": "https://build.nvidia.com/nvidia/video-search-and-summarization",
+      "readmeSha": "080be5ad796b517256aa1d87296c765aa810761a",
+      "githubUrl": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/NVIDIA-AI-Blueprints/video-search-and-summarization"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0TRXAPPqNs1hB8zY7JJVkssqP5Vpxi8ms7vnYVngnBWQpaCxPqmSqmihyLd8qf2Xml&id=100084639590584",
+          "postDate": "2026-05-16",
+          "relation": "具名 NVIDIA 專案，另列於 05-22 每週彙整"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+          "postDate": "2026-05-22",
+          "relation": "每週彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "CloakHQ/CloakBrowser",
+      "name": "CloakBrowser",
+      "category": "瀏覽器測試",
+      "intro": "提供經修改 Chromium 的 Python／JavaScript 包裝介面，可與 Playwright 或 Puppeteer 整合，用於有授權的瀏覽器相容性與自動化測試。",
+      "useCases": [
+        "研究瀏覽器環境差異",
+        "在自有測試環境重現自動化行為"
+      ],
+      "features": [
+        "Python 與 JavaScript wrapper",
+        "Playwright／Puppeteer 整合",
+        "獨立管理的 Chromium binary"
+      ],
+      "setup": "先查 wrapper 與 binary 的版本、授權及存取條件，再依官方文件安裝至隔離測試環境。",
+      "requirements": [
+        "對應 Python／Node.js 環境",
+        "可用且合法授權的 browser binary"
+      ],
+      "warnings": [
+        "repo 的 MIT 只涵蓋 wrapper；binary 有另外的散布、服務化與新版下載條件。",
+        "僅用於合法授權測試，遵守目標網站存取規則。"
+      ],
+      "license": "MIT wrapper；binary 另有授權",
+      "facebookSources": [
+        "https://www.facebook.com/reel/1286986806961970/",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02ZT6qGuqo99m1ri8EYKPjx4UaheSNqNdmDYgGqoTkoPDsxaZd8deNLmWt8VQaUxgSl&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "mixed_license",
+          "label": "Binary 另有條款",
+          "detail": "wrapper MIT 不涵蓋附帶 Chromium binary 的全部使用與散布權利。"
+        }
+      ],
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-04T21:55:58Z",
+      "branch": "main",
+      "homepage": "https://cloakbrowser.dev/",
+      "readmeSha": "6965b93d35c9cb22dbb9f80114c357c17bf4c0bd",
+      "githubUrl": "https://github.com/CloakHQ/CloakBrowser",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/CloakHQ/CloakBrowser"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/CloakHQ/CloakBrowser/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/CloakHQ/CloakBrowser/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1286986806961970/",
+          "postDate": "2026-05-16",
+          "relation": "具名 Chromium／Playwright／Puppeteer 介紹，並列每日／每週彙整"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02ZT6qGuqo99m1ri8EYKPjx4UaheSNqNdmDYgGqoTkoPDsxaZd8deNLmWt8VQaUxgSl&id=100084639590584",
+          "postDate": "2026-05-16",
+          "relation": "具名 Chromium／Playwright／Puppeteer 介紹，並列每日／每週彙整"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+          "postDate": "2026-05-22",
+          "relation": "每週彙整條目"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584",
+          "postDate": "2026-05-14",
+          "relation": "每日彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "tinyhumansai/openhuman",
+      "name": "OpenHuman",
+      "category": "個人 AI Agent",
+      "intro": "以 Rust 核心整合桌面、瀏覽器及終端介面的 agent 系統，可接不同模型、記憶引擎、工具與工作流程。",
+      "useCases": [
+        "建構有記憶與工具的個人助理",
+        "以可審閱工作流程串接服務"
+      ],
+      "features": [
+        "多前端共用 Rust core",
+        "可替換模型與記憶引擎",
+        "MCP、連接器及工作流程"
+      ],
+      "setup": "從官方 Releases 選擇安裝器，設定模型與需要的記憶／服務來源，再逐項授權連接器；原始碼開發依 INSTALL 與貢獻文件。",
+      "requirements": [
+        "受支援桌面系統或原始碼環境",
+        "模型與選用服務設定"
+      ],
+      "warnings": [
+        "貼文所述 MemoryTree／Obsidian 為當時內容；現行 README 已改以 Memory v2／CortexDB 描述，不把舊架構當成現況。",
+        "連接信箱、檔案與其他服務前需檢查資料流向及權限。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/2185679228859832/",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584"
+      ],
+      "license": "GPL-3.0",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T12:33:07Z",
+      "branch": "main",
+      "homepage": "https://tinyhumans.ai/openhuman",
+      "readmeSha": "d964993a696c3de558ca6ae70b3a67967bcfccf2",
+      "githubUrl": "https://github.com/tinyhumansai/openhuman",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/tinyhumansai/openhuman"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/tinyhumansai/openhuman/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/tinyhumansai/openhuman/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/2185679228859832/",
+          "postDate": "2026-05-16",
+          "relation": "具名個人 agent；同 repo 原始碼仍見舊 MemoryTree 痕跡，現 README 為新版架構"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+          "postDate": "2026-05-22",
+          "relation": "每週彙整條目"
+        }
+      ]
+    },
+    {
+      "repo": "siddharthvaddem/openscreen",
+      "name": "OpenScreen",
+      "category": "螢幕錄製",
+      "intro": "將螢幕錄製整理成產品示範或教學影片的桌面工具，提供縮放、背景、標註、字幕與匯出。原作目前已封存。",
+      "useCases": [
+        "錄製軟體示範與教學",
+        "加入縮放及標註，輸出 MP4／GIF"
+      ],
+      "features": [
+        "螢幕／視窗與音訊錄製",
+        "自動及手動縮放",
+        "裁切、字幕、背景與標註"
+      ],
+      "setup": "原 repo 的安裝包仍供參考，但已停止維護。原作者 README 指向社群延續版；選用延續版前另讀其平台需求與授權。",
+      "requirements": [
+        "相容 macOS、Windows 或 Linux",
+        "螢幕、音訊及輔助使用權限依功能而定"
+      ],
+      "warnings": [
+        "原 repo 已封存且不再維護。",
+        "getopenscreen/openscreen 是原 README 所指向的社群延續版，不是相同 repo。",
+        "錄製前避免畫面包含敏感資料，並確認他人影音的錄製同意。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/1516494933412637/"
+      ],
+      "replacementLinks": [
+        {
+          "label": "社群延續版",
+          "url": "https://github.com/getopenscreen/openscreen"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "archived",
+          "label": "原作已封存",
+          "detail": "原 README 指向 EtienneLescot/openscreen；其永久搬遷後為 getopenscreen/openscreen，ID 1181567753。"
+        }
+      ],
+      "license": "MIT",
+      "status": "公開・已封存",
+      "archived": true,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-06-17T02:34:20Z",
+      "branch": "main",
+      "homepage": null,
+      "readmeSha": "5fcd7a55cb7d7d1328c2a2aebe1a5752674aa81f",
+      "githubUrl": "https://github.com/siddharthvaddem/openscreen",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/siddharthvaddem/openscreen"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/siddharthvaddem/openscreen/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/siddharthvaddem/openscreen/blob/main/LICENSE"
+        },
+        {
+          "type": "continuation_readme",
+          "url": "https://github.com/getopenscreen/openscreen/blob/main/README.md"
+        },
+        {
+          "type": "continuation_redirect",
+          "url": "https://api.github.com/repos/EtienneLescot/openscreen"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/1516494933412637/",
+          "postDate": "2026-05-17",
+          "relation": "具名跨平台錄影及縮放功能；以原作 README 核對，另驗證其社群延續鏈結"
+        }
+      ]
+    },
+    {
+      "repo": "D4Vinci/Scrapling",
+      "name": "Scrapling",
+      "category": "網頁資料擷取",
+      "intro": "從 HTML 解析到多頁爬取的 Python 框架，提供元素選取、相似度比對與可調整的抓取流程，協助處理頁面結構變動。",
+      "useCases": [
+        "擷取授權網頁資料",
+        "將頁面整理成結構化內容"
+      ],
+      "features": [
+        "CSS／XPath 與文字選取",
+        "適應性元素追蹤",
+        "spider、非同步工作及選用 MCP"
+      ],
+      "setup": "需 Python 3.10+。基礎 scrapling 套件只含 parser；fetchers、spiders、瀏覽器與 MCP 要依需求另外安裝 extras 及依賴。",
+      "requirements": [
+        "Python 3.10+",
+        "所選抓取功能的附加依賴"
+      ],
+      "warnings": [
+        "遵守網站條款、速率與存取限制，不用於繞過授權。",
+        "頁面結構變動仍可能使擷取錯誤，應驗證資料。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/907582322293944/"
+      ],
+      "license": "BSD-3-Clause",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-06T07:40:35Z",
+      "branch": "main",
+      "homepage": "https://scrapling.readthedocs.io/en/latest/",
+      "readmeSha": "87d2942d9e94fab2c87895505e92511178f596e8",
+      "githubUrl": "https://github.com/D4Vinci/Scrapling",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/D4Vinci/Scrapling"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/D4Vinci/Scrapling/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/D4Vinci/Scrapling/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/907582322293944/",
+          "postDate": "2026-05-15",
+          "relation": "具名自適應網頁擷取框架；官方 repo 功能吻合"
+        }
+      ]
+    },
+    {
+      "repo": "supertone-oss-archive/supertonic",
+      "name": "Supertonic",
+      "category": "語音生成",
+      "intro": "透過 ONNX 在裝置端執行的多語言 TTS 範例與模型使用工具，可於下載完成後離線合成語音。目前已封存。",
+      "useCases": [
+        "研究本機低延遲語音合成",
+        "在支援的 runtime 測試離線配音"
+      ],
+      "features": [
+        "ONNX 本機推論",
+        "多語言與預設聲音風格",
+        "多程式語言使用範例"
+      ],
+      "setup": "依封存 README 使用 Python 3.11 虛擬環境，下載指定的封存模型 revision，安裝 py/requirements，再執行本機範例；也可參考其他 runtime 範例。",
+      "requirements": [
+        "相容 ONNX runtime",
+        "模型權重及執行環境"
+      ],
+      "warnings": [
+        "開發與支援已結束，不再有修正、安全更新或問題回應。",
+        "程式碼 MIT；模型權重採 OpenRAIL-M，使用前需分別閱讀。",
+        "合成聲音與內容需符合授權及隱私要求。"
+      ],
+      "license": "MIT 程式碼；OpenRAIL-M 模型",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02Az1M5uz3g6KxAq3P8UZFYT27NFFyRcbdZPPHCV8gKQKjTvgRwNFZG524f14mKnk6l&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "archived_discontinued",
+          "label": "已封存・停止支援",
+          "detail": "README 明確宣告開發、更新、安全修正與支援均已終止。"
+        }
+      ],
+      "status": "公開・已封存",
+      "archived": true,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-09T06:54:13Z",
+      "branch": "main",
+      "homepage": "https://huggingface.co/spaces/Supertone/supertonic-3",
+      "readmeSha": "b61bbef18bf783b99112d1103b71ce62642f89b1",
+      "githubUrl": "https://github.com/supertone-oss-archive/supertonic",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/supertone-oss-archive/supertonic"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/supertone-oss-archive/supertonic/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/supertone-oss-archive/supertonic/blob/main/LICENSE"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Az1M5uz3g6KxAq3P8UZFYT27NFFyRcbdZPPHCV8gKQKjTvgRwNFZG524f14mKnk6l&id=100084639590584",
+          "postDate": "2026-05-14",
+          "relation": "具名裝置端 ONNX TTS；官方封存 repo 定位吻合"
+        }
+      ]
+    },
+    {
+      "repo": "alibaba/page-agent",
+      "name": "Page Agent",
+      "category": "網頁 Agent",
+      "intro": "嵌入網頁內的 JavaScript GUI agent，透過文字化 DOM 與自然語言操作介面，可接自選模型並擴充跨頁能力。",
+      "useCases": [
+        "替自有 Web 應用加入 AI 助理",
+        "在授權頁面協助表單與介面流程"
+      ],
+      "features": [
+        "頁面內 JavaScript 整合",
+        "文字 DOM 操作",
+        "可選多頁擴充及 MCP"
+      ],
+      "setup": "在自己的網頁專案安裝 page-agent 並設定模型連線，再限定可執行操作。官方 CDN demo 僅供技術評估，使用前應閱讀其條款與隱私說明。",
+      "requirements": [
+        "JavaScript Web 專案",
+        "相容模型與服務設定"
+      ],
+      "warnings": [
+        "agent 可修改網頁狀態及送出資料，需設審核與權限。",
+        "不要把長期 API 秘密直接暴露在公開前端程式中。",
+        "示範服務與自行部署的資料處理條件不同。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/reel/858916239886200/"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-05T19:08:02Z",
+      "branch": "main",
+      "homepage": "https://alibaba.github.io/page-agent/",
+      "readmeSha": "5aeaca5ae2ef619be5a2f6706cc1e8eac7dadf50",
+      "githubUrl": "https://github.com/alibaba/page-agent",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/alibaba/page-agent"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/alibaba/page-agent/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/alibaba/page-agent/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/reel/858916239886200/",
+          "postDate": "2026-05-13",
+          "relation": "具名 Web UI agent；官方 Alibaba repo 名稱與用途吻合"
+        }
+      ]
+    },
+    {
+      "repo": "datawhalechina/hello-agents",
+      "name": "Hello-Agents",
+      "category": "AI 學習",
+      "intro": "Datawhale 的中文 agent 教程，從核心概念與經典設計模式，到記憶、檢索、評估及多 agent 綜合實作。",
+      "useCases": [
+        "從原理學習如何建立 agent",
+        "逐步完成記憶、工具與協作實作"
+      ],
+      "features": [
+        "中文系統化教材",
+        "理論搭配 code 範例",
+        "從單一到多 agent 的案例"
+      ],
+      "setup": "可直接線上閱讀，或 clone repo 依章節執行 code 中的範例；各模型與套件依相應章節設定。",
+      "requirements": [
+        "基礎 Python 能力",
+        "LLM 與 API 基本概念"
+      ],
+      "warnings": [
+        "內容授權為 CC BY-NC-SA 4.0，含非商用與相同方式分享條件。",
+        "程式、模型及雲端服務的額外要求需逐章確認。"
+      ],
+      "license": "CC-BY-NC-SA-4.0",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0Gw7SDZr2kgwmED8TpWdGn6F45535igBKzgctknweKGShQAWsGvfbZMq7ozFu9e2Bl&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "noncommercial_license",
+          "label": "非商用・相同方式分享",
+          "detail": "LICENSE.txt 為 CC BY-NC-SA 4.0。"
+        }
+      ],
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-29T11:53:44Z",
+      "branch": "main",
+      "homepage": "https://hello-agents.datawhale.cc",
+      "readmeSha": "c9644b3cd7cc6327749553cbf3c70ee51e8999e5",
+      "githubUrl": "https://github.com/datawhalechina/hello-agents",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/datawhalechina/hello-agents"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/datawhalechina/hello-agents/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/datawhalechina/hello-agents/blob/main/LICENSE.txt"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0Gw7SDZr2kgwmED8TpWdGn6F45535igBKzgctknweKGShQAWsGvfbZMq7ozFu9e2Bl&id=100084639590584",
+          "postDate": "2026-05-13",
+          "relation": "貼文中文書名與官方 Datawhale 教程完全吻合"
+        }
+      ]
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "name": "Scientific Agent Skills",
+      "category": "科學研究工具",
+      "intro": "供 agent 使用的科學工作流程技能庫，整理資料分析、文獻與科學工具／資料庫介面，涵蓋多個研究領域。",
+      "useCases": [
+        "整理可重複的科學資料分析流程",
+        "為研究 agent 加入特定工具說明"
+      ],
+      "features": [
+        "Agent Skills 標準",
+        "依工具與學科分類",
+        "包含依賴、腳本及資料庫使用指引"
+      ],
+      "setup": "先選需要的技能並閱讀內容，再透過相容 skills 安裝器安裝。各科學工作流程使用獨立環境，按 compatibility 欄位補上依賴。",
+      "requirements": [
+        "支援 Agent Skills 的 host",
+        "個別技能的 Python、uv、套件與服務設定"
+      ],
+      "warnings": [
+        "官方明確建議不要一次安裝整套；技能可能執行程式、連網或修改檔案。",
+        "分析及科學結論需專業驗證，不用來替代醫療、診斷或實驗安全審核。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-10-05T09:39:11Z",
+      "branch": "main",
+      "homepage": "https://arxiv.org/abs/2609.00065",
+      "readmeSha": "3fcebf5c0e49e39dc87e5b577d0368d313124862",
+      "githubUrl": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/K-Dense-AI/scientific-agent-skills"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/LICENSE.md"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584",
+          "postDate": "2026-05-14",
+          "relation": "每日彙整直接列出 repo"
+        }
+      ]
+    },
+    {
+      "repo": "danielmiessler/LifeOS",
+      "originalRepo": "danielmiessler/Personal_AI_Infrastructure",
+      "name": "LifeOS（原 PAI）",
+      "category": "個人 AI Agent",
+      "intro": "在 AI coding harness 上加入個人脈絡、持續記憶、技能與工作流程的整合層，讓不同工作階段延續目標與既有決策。",
+      "useCases": [
+        "整理個人 AI 助理的技能與脈絡",
+        "保留跨工作階段的知識與決策"
+      ],
+      "features": [
+        "持續記憶與個人 context",
+        "技能庫與工作流程路由",
+        "基於 hooks、skills 與 context files"
+      ],
+      "setup": "需相容 coding harness 與 Bun。先閱讀現行 LifeOS 官方安裝說明、備份現有設定，再選擇對應安裝方式。",
+      "requirements": [
+        "相容 coding harness",
+        "Bun；以 Claude Code 路徑測試最充分"
+      ],
+      "warnings": [
+        "Personal_AI_Infrastructure 已改名 LifeOS；GitHub 重導與 repo ID 1052845083 一致。",
+        "安裝會涉及 agent 設定、hooks 與私人 context，應先檢查權限並備份。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584"
+      ],
+      "verificationFlags": [
+        {
+          "type": "repository_renamed",
+          "label": "PAI 已改名 LifeOS",
+          "detail": "同 repo ID 1052845083，舊連結永久重導至新名稱。"
+        }
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-04T01:07:21Z",
+      "branch": "main",
+      "homepage": "https://ourlifeos.ai",
+      "readmeSha": "49f15a35d55bce331ffe444576bdfebd729c5eb9",
+      "githubUrl": "https://github.com/danielmiessler/LifeOS",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/danielmiessler/LifeOS"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/danielmiessler/LifeOS/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/danielmiessler/LifeOS/blob/main/LICENSE"
+        },
+        {
+          "type": "original_repository_redirect",
+          "url": "https://api.github.com/repos/danielmiessler/Personal_AI_Infrastructure",
+          "result": "Moved Permanently；repo ID 1052845083"
+        }
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584",
+          "postDate": "2026-05-14",
+          "relation": "每日彙整直接列舊 repo；GitHub 驗證改名"
+        }
+      ]
+    },
+    {
+      "repo": "yikart/AiToEarn",
+      "name": "AiToEarn",
+      "category": "內容行銷",
+      "intro": "整合 AI 內容製作、排程與多平台發佈的工作區，可接網站、agent、MCP 或自架環境，管理內容流程。",
+      "useCases": [
+        "整理跨平台內容草稿及排程",
+        "研究 AI 輔助圖文／影片製作流程"
+      ],
+      "features": [
+        "內容生成與多平台發佈",
+        "行事曆排程",
+        "MCP／agent 及 Docker 接入方式"
+      ],
+      "setup": "可使用官方服務或依 README 自架 Docker／原始碼。按所需模式設定 API 與平台授權，先用草稿流程測試，再逐項批准發佈權限。",
+      "requirements": [
+        "所選部署環境",
+        "內容生成服務及平台帳戶授權"
+      ],
+      "warnings": [
+        "名稱與行銷主張不代表可保證收益。",
+        "社群發佈與互動有真實外部影響，須遵守平台政策並取得明確授權。",
+        "雲端 API、模型與平台功能可能另有費用。"
+      ],
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584"
+      ],
+      "license": "MIT",
+      "status": "公開・未封存",
+      "archived": false,
+      "public": true,
+      "disabled": false,
+      "pushedAt": "2026-09-18T07:18:26Z",
+      "branch": "main",
+      "homepage": "https://aitoearn.ai/",
+      "readmeSha": "8d30687c0a8eeccbf7a299794e24a97cd9d6d54f",
+      "githubUrl": "https://github.com/yikart/AiToEarn",
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector：repository metadata、README、LICENSE",
+      "sources": [
+        {
+          "type": "repository_metadata",
+          "url": "https://api.github.com/repos/yikart/AiToEarn"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/yikart/AiToEarn/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/yikart/AiToEarn/blob/main/LICENSE"
+        }
+      ],
+      "verificationFlags": [],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584",
+          "postDate": "2026-05-14",
+          "relation": "每日彙整直接列出 repo"
+        }
+      ]
+    },
+    {
+      "repo": "rohigt00/agentmemory",
+      "name": "AgentMemory（來源拼字待確認）",
+      "category": "待驗證",
+      "intro": "每日彙整列出的 repo 是 rohigt00/agentmemory，目前 GitHub 查詢回傳 404，無法核實其內容與授權。",
+      "useCases": [],
+      "features": [],
+      "setup": "尚未確認正確專案，暫無安裝概要。",
+      "requirements": [],
+      "warnings": [
+        "保留來源原字串 rohigt00，不自行改成其他名稱相近的帳號。",
+        "404 本身無法判斷是否拼字、移除或權限問題。"
+      ],
+      "license": null,
+      "status": "原始連結無法驗證",
+      "archived": null,
+      "public": null,
+      "disabled": null,
+      "pushedAt": null,
+      "branch": null,
+      "homepage": null,
+      "readmeSha": null,
+      "githubUrl": "https://github.com/rohigt00/agentmemory",
+      "facebookSources": [
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584"
+      ],
+      "provenance": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02yButri9RFrrykvbRh3EpEkm1P3JPJtM3mLL6fBmCaNTbE8JW5MbRZPhrroA2gZdJl&id=100084639590584",
+          "postDate": "2026-05-14",
+          "relation": "每日彙整直接列出的原始 repo 字串"
+        }
+      ],
+      "verificationFlags": [
+        {
+          "type": "unverified_link",
+          "label": "來源拼字待確認",
+          "detail": "原字串 GitHub 回 404，未替換為相近帳號。"
+        }
+      ],
+      "checkedDate": "2026-10-06",
+      "setupExecuted": false,
+      "verification": "GitHub connector 與 GitHub 網頁均回 404",
+      "sources": [
+        {
+          "type": "attempted_repository_metadata",
+          "url": "https://api.github.com/repos/rohigt00/agentmemory",
+          "result": "404 Not Found"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "pageName": "今天GitHub又瘋了-AI研究所",
+    "pageUrl": "https://www.facebook.com/profile.php?id=100084639590584",
+    "checkedDate": "2026-10-06",
+    "summary": "本次查閱 2026-05-13 至 2026-10-06 間部分公開貼文的可讀文字與作者連結，收錄能對應到 repo 的介紹及日／週彙整。動態牆舊文出現載入逾時，且未逐部驗證影片畫面與口述；因此這是已核實條目的部分整理，不是全部歷史。",
+    "pending": [
+      {
+        "date": "2026-10-06",
+        "label": "第 138 期離線 OCR",
+        "url": "https://www.facebook.com/reel/1652869519731248/",
+        "note": "可讀文字未提供 repo 名稱／網址，尚未以影片內容確認。"
+      },
+      {
+        "date": "2026-09-28",
+        "label": "Open muse",
+        "url": "https://www.facebook.com/reel/1786561389205540/",
+        "note": "名稱不足以唯一確認 repo，沒有自行配對相似專案。"
+      },
+      {
+        "date": "2026-05-22",
+        "label": "週報中的未匹配名稱",
+        "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mNjEaQaWWHbfqoMYogSMyzZroMHsgWHuC5HyBj2kirLXbjeV9SeaoFggrjhEEbUZl&id=100084639590584",
+        "note": "free-claude-code、CodeGraph、Agency Agents、AI-Trader、AgentMemory 尚待可靠的原始 repo 連結消歧。"
+      }
+    ]
+  }
+}
